@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Folders
+.config
+[o|O]bj
+[b|B]in
+nupkg
+.vs

@@ -22,6 +22,9 @@ Usefull commands
 # Get the list of tool
 dotnet tool list
 
+# Get the list of templates
+dotnet new list
+
 # Install from nuget
 dotnet tool install -g genocs.cli
 
@@ -29,7 +32,7 @@ dotnet tool install -g genocs.cli
 dotnet tool update -g genocs.cli
 
 # Uninstall cache
-dotnet tool uninstall genocs.cli -g
+dotnet tool uninstall -g genocs.cli
 ```
 
 
@@ -42,14 +45,11 @@ dotnet build ./src/genocs.cli.csproj
 dotnet pack
 
 # Run the tool to install the templates
-dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs i
+dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
 dotnet run -f net7.0 genocs -i
-
-# Pack the tool (to be deployed on nuget) 
-dotnet pack
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./src/nupkg genocs.cli

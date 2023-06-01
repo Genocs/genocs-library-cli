@@ -15,13 +15,16 @@ ShowBot("Hello!!!");
 
 if (args.Length == 0)
 {
-    Console.WriteLine("Insufficient params. Please refer to https://blog.genocs.com/dotnet-webapi-boilerplate/general/genocs-api-console");
+    Console.WriteLine("Insufficient params.");
+    Console.WriteLine("Use following syntax:\n");
+    Console.WriteLine("    genocs [cleanarchitecture|microservice|blazor] [-n|--new] <CompanyName.ProjectName.ServiceName>");
+    Console.WriteLine("    genocs [cleanarchitecture|microservice|blazor] [-n|--new] <ServiceName>");
+    Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
     return;
 }
 
-
 string firstArg = args[0].Trim().ToLower();
-if (firstArg == "install" || firstArg == "i" || firstArg == "update" || firstArg == "u")
+if (firstArg == "--install" || firstArg == "-i" || firstArg == "--update" || firstArg == "-u")
 {
     await InstallTemplates();
     return;
@@ -38,7 +41,7 @@ if (firstArg == "cleanarchitecture")
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
     string projectName = args[2].Trim();
-    if (command == "n" || command == "new")
+    if (command == "-n" || command == "--new")
     {
         await BootstrapCleanArchitectureSolution(projectName);
     }
@@ -57,7 +60,7 @@ if (firstArg == "microservice")
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
     string projectName = args[2].Trim();
-    if (command == "n" || command == "new")
+    if (command == "-n" || command == "--new")
     {
         await BootstrapMicroserviceSolution(projectName);
     }
@@ -66,11 +69,11 @@ if (firstArg == "microservice")
 }
 
 
-if (firstArg == "wasm")
+if (firstArg == "blazor")
 {
     if (args.Length != 3)
     {
-        Console.WriteLine("Invalid command. Use something like: genocs wasm new <CompanyName.ProjectName>");
+        Console.WriteLine("Invalid command. Use something like: genocs blazor new <CompanyName.ProjectName>");
         return;
     }
 
@@ -78,7 +81,7 @@ if (firstArg == "wasm")
     // Convert to Capital case
     // Convert to Capital case
     string projectName = args[2].Trim();
-    if (command == "n" || command == "new")
+    if (command == "-n" || command == "--new")
     {
         await BootstrapBlazorWasmSolution(projectName);
     }
@@ -167,7 +170,7 @@ async Task InstallTemplates()
     await cleanArchitectureProc.WaitForExitAsync();
     // --------------------------
 
-    Console.WriteLine("Installing genocs Microservice template...");
+    Console.WriteLine("Installing Genocs Microservice template...");
     var microservicePsi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -178,7 +181,7 @@ async Task InstallTemplates()
     await microserviceProc.WaitForExitAsync();
     // --------------------------
 
-    Console.WriteLine("Installing genocs blazor wasm template...");
+    Console.WriteLine("Installing Genocs Blazor template...");
     var blazorWebAssemblyPsi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -192,7 +195,7 @@ async Task InstallTemplates()
     WriteSuccessMessage("Installed the required templates.");
     Console.WriteLine("Get started by using : genocs <type> new <CompanyName.ProjectName>.");
     Console.WriteLine("NOTE: <type> can be [cleanarchitecture | microservice | blazor].");
-    Console.WriteLine("Refer to documentation at https://majestic-wisp-d90424.netlify.app");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapCleanArchitectureSolution(string projectName)
@@ -207,7 +210,7 @@ async Task BootstrapCleanArchitectureSolution(string projectName)
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Genocs Architecture solution {projectName} successfully created.");
     WriteSuccessMessage("Application ready! Build something amazing!");
-    Console.WriteLine("Refer to documentation at https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapMicroserviceSolution(string projectName)
@@ -222,7 +225,7 @@ async Task BootstrapMicroserviceSolution(string projectName)
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Genocs Microservice solution {projectName} successfully created.");
     WriteSuccessMessage("Application ready! Build something amazing!");
-    Console.WriteLine("Refer to documentation at https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapBlazorWasmSolution(string projectName)
@@ -236,9 +239,9 @@ async Task BootstrapBlazorWasmSolution(string projectName)
 
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs blazor wasm solution {projectName} successfully created.");
+    WriteSuccessMessage($"Genocs blazor solution {projectName} successfully created.");
     WriteSuccessMessage("Application ready! Build something amazing!");
-    Console.WriteLine("Refer to documentation at https://blog.genocs.com/blazor-webassembly-boilerplate/general/getting-started/");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 static void WriteSuccessMessage(string message)

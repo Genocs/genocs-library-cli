@@ -12,7 +12,7 @@
 		<PackageId>Genocs.CLI</PackageId>
 		<Title>Genocs CLI Tool</Title>
 		<Authors>Nocco Giovanni Emanuele</Authors>
-		<Description>Genocs CLI tool for creating and using Genocs Boilerplate Projects.</Description>
+		<Description>Genocs CLI tool for creating and using Genocs Templates.</Description>
 		<PackageTags>dotnet-new;templates</PackageTags>
 		<RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
 		<PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>

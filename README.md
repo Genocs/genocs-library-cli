@@ -17,7 +17,7 @@ Genocs cli can be used on NET6 or NET7 runtimes
 
 ---
 
-Usefull commands 
+Useful commands 
 ``` bash
 # Get the list of tool
 dotnet tool list
@@ -36,7 +36,7 @@ dotnet tool uninstall -g genocs.cli
 ```
 
 
-Usefull commands to work on your own 
+Useful commands to work on your own 
 ``` bash
 # build the project 
 dotnet build ./src/genocs.cli.csproj

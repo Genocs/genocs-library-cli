@@ -2,7 +2,7 @@
   "profiles": {
     "genocs.cli": {
       "commandName": "Project",
-      "commandLineArgs": "i"
+      "commandLineArgs": "-u"
     }
   }
 }

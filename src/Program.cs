@@ -42,7 +42,7 @@ if (firstArg == "angular")
 
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
-    string projectName = args[2].Trim();
+    string projectName = args[2].Trim().ToLower();
     if (command == "n" || command == "new")
     {
         await BootstrapAngularSolution(projectName);
@@ -61,7 +61,7 @@ if (firstArg == "blazor")
 
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
-    string projectName = args[2].Trim();
+    string projectName = args[2].Trim().ToLower();
     if (command == "n" || command == "new")
     {
         await BootstrapBlazorSolution(projectName);
@@ -80,7 +80,7 @@ if (firstArg == "worker")
 
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
-    string projectName = args[2].Trim();
+    string projectName = args[2].Trim().ToLower();
     if (command == "n" || command == "new")
     {
         await BootstrapBlazorSolution(projectName);
@@ -99,7 +99,7 @@ if (firstArg == "webapi")
 
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
-    string projectName = args[2].Trim();
+    string projectName = args[2].Trim().ToLower();
     if (command == "n" || command == "new")
     {
         await BootstrapMicroserviceSolution(projectName);
@@ -119,7 +119,7 @@ if (firstArg == "cleanapi")
     string command = args[1].Trim().ToLower();
     // Convert to Capital case
     // Convert to Capital case
-    string projectName = args[2].Trim();
+    string projectName = args[2].Trim().ToLower();
     if (command == "n" || command == "new")
     {
         await BootstrapCleanArchitectureSolution(projectName);

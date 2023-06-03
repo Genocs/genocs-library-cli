@@ -8,7 +8,7 @@ Genocs cli is the genocs **dotnet tool**  that allow you to use the genocs templ
 Genocs template are dotnet template that will help you to setup quickly and easily your microservices.
 
 Here where you can find the official Documentation:
-- [microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
+- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
 
 ## Supported runtime

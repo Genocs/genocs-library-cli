@@ -9,7 +9,7 @@ if (args.Length == 0)
 {
     ShowBot("Hello!!!");
     Console.WriteLine("Missing params. Use following syntax:");
-    WriteColorConsole("    genocs [-i|--install|-u|--update", ConsoleColor.Cyan);
+    WriteColorConsole("    genocs [i|install|u|update", ConsoleColor.Cyan);
     Console.WriteLine("Than follow with:");
     WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
     Console.WriteLine("or with:");
@@ -26,7 +26,7 @@ WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleC
 
 
 string firstArg = args[0].Trim().ToLower();
-if (firstArg == "--install" || firstArg == "-i" || firstArg == "--update" || firstArg == "-u")
+if (firstArg == "install" || firstArg == "i" || firstArg == "update" || firstArg == "u")
 {
     await InstallTemplates();
     return;
@@ -336,7 +336,7 @@ static void WriteColorEx(string str, params (string substring, ConsoleColor colo
 }
 
 Console.WriteLine("Invalid params. Use following syntax:");
-WriteColorConsole("    genocs [-i|--install|-u|--update", ConsoleColor.Cyan);
+WriteColorConsole("    genocs [i|install|u|update", ConsoleColor.Cyan);
 Console.WriteLine("Than follow with:");
 WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
 Console.WriteLine("or with:");

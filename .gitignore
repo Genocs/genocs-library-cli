@@ -56,4 +56,5 @@ dkms.conf
 [o|O]bj
 [b|B]in
 nupkg
+nupkgs
 .vs

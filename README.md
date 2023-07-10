@@ -43,6 +43,7 @@ dotnet build ./src/genocs.cli.csproj
 
 # Pack the tool (to be deployed on nuget) 
 dotnet pack
+dotnet pack --output nupkgs
 
 # Run the tool to install the templates
 dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i

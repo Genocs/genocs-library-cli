@@ -7,17 +7,13 @@ public static class StringExtensions
     public static string ToCapitalCase(this string str)
     {
         // Implement capital case logic here
-        if (str == null)
-        {
-            throw new ArgumentNullException(nameof(str));
-        }
-        if (str.Length == 0)
+        if (string.IsNullOrWhiteSpace(str))
         {
             return str;
         }
 
         // Split the string into words separated by a space character or period
-        var splitString = str.Split(' ', '.');
+        var splitString = str.Trim().Split(' ', '.');
         var sb = new StringBuilder();
         foreach (var word in splitString)
         {

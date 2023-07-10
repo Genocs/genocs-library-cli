@@ -14,6 +14,9 @@ Please check the GitHub repository getting more info.
 
 ## Release notes
 
+### [2023-07-10] 0.0.5
+- Fix crash in case of leading and trailing spaces
+
 ### [2023-07-10] 0.0.4
 - Added capitalCase on the project name
 

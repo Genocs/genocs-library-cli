@@ -14,6 +14,9 @@ Please check the GitHub repository getting more info.
 
 ## Release notes
 
+### [2023-07-10] 0.0.4
+- Added capitalCase on the project name
+
 ### [2023-06-03] 0.0.3
 - Updated syntax to .Net 7.0
 

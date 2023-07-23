@@ -38,11 +38,12 @@ dotnet tool uninstall -g genocs.cli
 
 Useful commands to work on your own 
 ``` bash
+cd ./src
 # build the project 
-dotnet build ./src/genocs.cli.csproj
+dotnet build genocs.cli.csproj
 
 # Pack the tool (to be deployed on nuget) 
-dotnet pack
+dotnet pack -p:PackageVersion=0.0.6 --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates
@@ -53,5 +54,5 @@ cd ./src
 dotnet run -f net7.0 genocs -i
 
 # Install the tool from local folder to the global cache
-dotnet tool install --global --add-source ./src/nupkg genocs.cli
+dotnet tool install --global --add-source ./nupkgs genocs.cli
 ```

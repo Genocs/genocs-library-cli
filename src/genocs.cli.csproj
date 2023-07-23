@@ -7,7 +7,7 @@
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
 		<ToolCommandName>genocs</ToolCommandName>
-		<PackageVersion>0.0.5</PackageVersion>
+		<PackageVersion>0.0.6</PackageVersion>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<PackageId>Genocs.CLI</PackageId>
 		<Title>Genocs CLI Tool</Title>
@@ -19,7 +19,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
-		<VersionPrefix>0.0.5</VersionPrefix>	
+		<VersionPrefix>0.0.6</VersionPrefix>	
 </PropertyGroup>
 	
 	<ItemGroup>

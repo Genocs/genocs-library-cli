@@ -1,5 +1,12 @@
 # Genocs cli
 
+[![GitHub](https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square)](https://github.com/Genocs/library-cli/blob/main/LICENSE)
+[![.NET build and test](https://github.com/Genocs/library-cli/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/Genocs/library-cli/actions/workflows/build_and_test.yml)
+[![NuGet](https://img.shields.io/badge/nuget-v.0.0.7-blue)](https://www.nuget.org/packages/Genocs.CLI)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Genocs.CLI.svg)](https://www.nuget.org/packages/Genocs.CLI)
+[![Discord](https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square)](https://discord.com/invite/fWwArnkV)
+[![Twitter](https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square)](https://twitter.com/genocs)
+
 Another key component for the Genocs ecosystem
 
 ## Introduction

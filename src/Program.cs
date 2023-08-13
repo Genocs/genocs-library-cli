@@ -2,7 +2,6 @@
 
 using Genocs.CLI;
 using System.Diagnostics;
-using System.Reflection;
 using System.Text.RegularExpressions;
 
 
@@ -10,7 +9,7 @@ if (args.Length == 0)
 {
     ShowBot("");
     Console.WriteLine("Missing params. Use following syntax:");
-    WriteColorConsole("    genocs [i|install|u|update", ConsoleColor.Cyan);
+    WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
     Console.WriteLine("Than follow with:");
     WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
     Console.WriteLine("or with:");
@@ -19,11 +18,11 @@ if (args.Length == 0)
     return;
 }
 
-var version = Assembly.GetEntryAssembly()?
-                        .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
-                        .InformationalVersion;
+//var version = Assembly.GetEntryAssembly()?
+//                        .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
+//                        .InformationalVersion;
 
-WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
+//WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
 
 
 string firstArg = args[0].Trim().ToLower();
@@ -128,6 +127,13 @@ if (firstArg == "cleanapi")
     return;
 }
 
+// Fallback
+WriteColorConsole("Sorry I don't understand your command!", ConsoleColor.DarkRed);
+WriteColorConsole("Accepted syntax is something like:", ConsoleColor.Cyan);
+WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
+return;
+
+
 
 static void ShowBot(string message)
 {
@@ -201,7 +207,7 @@ async Task InstallTemplates()
     await blazorWebAssemblyProc.WaitForExitAsync();
     // --------------------------
 
-    WriteSuccessMessage("Installed the required templates.");
+    WriteSuccessMessage("Templates installed successfully.");
     WriteSuccessMessage("Type: dotnet new list to see the whole set of dotnet templates.");
 
     Console.WriteLine("Get started by typing:");

@@ -14,6 +14,9 @@ Please check the GitHub repository getting more info.
 
 ## Release notes
 
+### [2023-08-13] 0.0.7
+- Updated banner plus fix weird behavior
+
 ### [2023-07-23] 0.0.6
 - Added gnx-webapi support
 

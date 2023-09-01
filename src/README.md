@@ -14,6 +14,9 @@ Please check the GitHub repository getting more info.
 
 ## Release notes
 
+### [2023-09-01] 0.0.8
+- Updated templates
+
 ### [2023-08-13] 0.0.7
 - Updated banner plus fix weird behavior
 

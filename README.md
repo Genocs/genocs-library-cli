@@ -55,7 +55,7 @@ cd ./src
 dotnet build genocs.cli.csproj
 
 # Pack the tool (to be deployed on nuget) 
-dotnet pack -p:PackageVersion=0.0.7 --output nupkgs
+dotnet pack -p:PackageVersion={semver} --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates

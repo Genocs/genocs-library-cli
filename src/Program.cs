@@ -10,7 +10,7 @@ if (args.Length == 0)
     ShowBot("");
     Console.WriteLine("Missing params. Use following syntax:");
     WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
-    Console.WriteLine("Than follow with:");
+    Console.WriteLine("then follow with:");
     WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
     Console.WriteLine("or with:");
     WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
@@ -173,23 +173,23 @@ static void WriteColor(string message, ConsoleColor color)
 
 async Task InstallTemplates()
 {
-    WriteSuccessMessage("Installing genocs dotnet Clean Architecture template...");
+    WriteSuccessMessage("Installing Genocs WebApi Clean Architecture template...");
 
     var cleanArchitecturePsi = new ProcessStartInfo
     {
         FileName = "dotnet",
-        Arguments = "new install Genocs.CleanArchitectureTemplate::2.1.0"
+        Arguments = "new install Genocs.CleanArchitectureTemplate"
     };
 
     using var cleanArchitectureProc = Process.Start(cleanArchitecturePsi)!;
     await cleanArchitectureProc.WaitForExitAsync();
     // --------------------------
 
-    Console.WriteLine("Installing Genocs Microservice template...");
+    Console.WriteLine("Installing Genocs WebApi Microservice template...");
     var microservicePsi = new ProcessStartInfo
     {
         FileName = "dotnet",
-        Arguments = "new install Genocs.WebApiTemplate::1.0.3"
+        Arguments = "new install Genocs.WebApiTemplate"
     };
 
     using var microserviceProc = Process.Start(microservicePsi)!;
@@ -200,7 +200,7 @@ async Task InstallTemplates()
     var blazorWebAssemblyPsi = new ProcessStartInfo
     {
         FileName = "dotnet",
-        Arguments = "new install Genocs.MicroserviceTemplate::0.1.0"
+        Arguments = "new install Genocs.MicroserviceTemplate"
     };
 
     using var blazorWebAssemblyProc = Process.Start(blazorWebAssemblyPsi)!;

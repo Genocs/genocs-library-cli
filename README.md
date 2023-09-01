@@ -12,12 +12,12 @@
 
 
 
-Another key component for the Genocs ecosystem
+Another key component for the Genocs ecosystem.
 
 ## Introduction
 
-Genocs cli is the genocs **dotnet tool**  that allow you to use the genocs templates.
-Genocs template are dotnet template that will help you to setup quickly and easily your microservices.
+Genocs cli is the genocs **dotnet tool**  that allow you to use genocs templates.
+Genocs templates are dotnet template that will help you to setup quick and easy your microservice solution.
 
 Here where you can find the official Documentation:
 - [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
@@ -25,7 +25,7 @@ Here where you can find the official Documentation:
 
 ## Supported runtime
 
-Genocs cli can be used on NET6 or NET7 runtimes
+Genocs cli can be used on NET6 or NET7 runtimes.
 
 ---
 

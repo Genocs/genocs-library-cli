@@ -1,7 +1,10 @@
-name: Build
+name: Build test and pack
 
 on:
   push:
+    branches: ["main"]
+
+  pull_request:
     branches: ["main"]
 
 jobs:
@@ -22,4 +25,10 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet build ./src/genocs.cli.csproj --no-restore
+        run: dotnet build --no-restore
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack --no-build --verbosity normal

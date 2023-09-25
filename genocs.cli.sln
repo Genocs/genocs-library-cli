@@ -7,6 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "genocs.cli", "src\genocs.cl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{BE6A9801-D663-426E-8591-E4A7556DC972}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
 		README.md = README.md
 	EndProjectSection
 EndProject

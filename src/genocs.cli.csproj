@@ -1,47 +1,53 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<PackAsTool>true</PackAsTool>
-		<ToolCommandName>genocs</ToolCommandName>
-		<PackageVersion>0.0.6</PackageVersion>
-		<PackageOutputPath>./nupkg</PackageOutputPath>
-		<PackageId>Genocs.CLI</PackageId>
-		<Title>Genocs CLI Tool</Title>
-		<Authors>Nocco Giovanni Emanuele</Authors>
-		<Copyright>Copyright (c) 2023 Genocs Services</Copyright>
-		<Description>Genocs CLI tool to use Genocs Templates.</Description>
-		<PackageTags>dotnet-new;templates</PackageTags>
-		<RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
-		<PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageIcon>icon.png</PackageIcon>
-		<VersionPrefix>0.0.6</VersionPrefix>	
-</PropertyGroup>
-	
-	<ItemGroup>
-		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\icon.png">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <PackageReference Include="Figgle" Version="0.5.1" />
-	</ItemGroup>
-	
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>genocs</ToolCommandName>
+        <PackageVersion>0.0.6</PackageVersion>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <PackageId>Genocs.CLI</PackageId>
+        <Title>Genocs CLI Tool</Title>
+        <Authors>Nocco Giovanni Emanuele</Authors>
+        <Copyright>Copyright (c) 2023 Genocs Services</Copyright>
+        <Description>Genocs CLI tool to use Genocs Templates.</Description>
+        <PackageTags>dotnet-new;templates</PackageTags>
+        <RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
+        <PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <VersionPrefix>0.0.6</VersionPrefix>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Figgle" Version="0.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="genocs.cli.templates.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
 </Project>
 
 

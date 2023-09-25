@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 if (args.Length == 0)
 {
-    ShowBot("");
+    ShowBot(string.Empty);
     Console.WriteLine("Missing params. Use following syntax:");
     WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
     Console.WriteLine("then follow with:");
@@ -133,8 +133,6 @@ WriteColorConsole("Accepted syntax is something like:", ConsoleColor.Cyan);
 WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
 return;
 
-
-
 static void ShowBot(string message)
 {
     string bot = $"\n        {message}";
@@ -152,7 +150,7 @@ static void ShowBot(string message)
 
 static void WriteColor(string message, ConsoleColor color)
 {
-    var pieces = Regex.Split(message, @"(\[[^\]]*\])");
+    string[] pieces = Regex.Split(message, @"(\[[^\]]*\])");
 
     for (int i = 0; i < pieces.Length; i++)
     {
@@ -173,39 +171,18 @@ static void WriteColor(string message, ConsoleColor color)
 
 async Task InstallTemplates()
 {
-    WriteSuccessMessage("Installing Genocs WebApi Clean Architecture template...");
-
-    var cleanArchitecturePsi = new ProcessStartInfo
+    foreach (string template in TemplateReader.GetTemplates())
     {
-        FileName = "dotnet",
-        Arguments = "new install Genocs.CleanArchitectureTemplate"
-    };
+        Console.WriteLine($"Installing {template} template...");
+        var psi = new ProcessStartInfo
+        {
+            FileName = "dotnet",
+            Arguments = $"new install {template}"
+        };
 
-    using var cleanArchitectureProc = Process.Start(cleanArchitecturePsi)!;
-    await cleanArchitectureProc.WaitForExitAsync();
-    // --------------------------
-
-    Console.WriteLine("Installing Genocs WebApi Microservice template...");
-    var microservicePsi = new ProcessStartInfo
-    {
-        FileName = "dotnet",
-        Arguments = "new install Genocs.WebApiTemplate"
-    };
-
-    using var microserviceProc = Process.Start(microservicePsi)!;
-    await microserviceProc.WaitForExitAsync();
-    // --------------------------
-
-    Console.WriteLine("Installing Genocs Blazor template...");
-    var blazorWebAssemblyPsi = new ProcessStartInfo
-    {
-        FileName = "dotnet",
-        Arguments = "new install Genocs.MicroserviceTemplate"
-    };
-
-    using var blazorWebAssemblyProc = Process.Start(blazorWebAssemblyPsi)!;
-    await blazorWebAssemblyProc.WaitForExitAsync();
-    // --------------------------
+        using var proc = Process.Start(psi)!;
+        await proc.WaitForExitAsync();
+    }
 
     WriteSuccessMessage("Templates installed successfully.");
     WriteSuccessMessage("Type: dotnet new list to see the whole set of dotnet templates.");

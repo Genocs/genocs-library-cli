@@ -1,6 +1,6 @@
 # This is a manually triggered nuget build and deploy
 
-name: Publish on NuGet
+name: Publish to NuGet
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -21,7 +21,7 @@ on:
 
 jobs:
   build:
-    name: Update NuGet packages
+    name: Build, Test, Pack, Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

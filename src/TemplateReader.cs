@@ -1,7 +1,5 @@
 ﻿using System.Text.Json;
 
-using Genocs.CLI;
-
 internal class TemplateReader
 {
     /// <summary>
@@ -13,7 +11,21 @@ internal class TemplateReader
         const string resourceName = "genocs.cli.templates.json";
 
         // Read json file
-        string fileContent = System.IO.File.ReadAllText(resourceName);
+        if (!File.Exists(resourceName))
+        {
+            return new List<string>
+            {
+                "Genocs.BlazorTemplate",
+                "Genocs.CleanArchitectureTemplate",
+                "Genocs.MicroserviceTemplate",
+                "Genocs.WebApiTemplate",
+                "Genocs.CleanArchitecture.Template",
+                "Genocs.Library.Template",
+                "Genocs.Microservice.Template"
+            };
+        }
+
+        string fileContent = File.ReadAllText(resourceName);
 
         // Deserialize json
         return JsonSerializer.Deserialize<List<string>>(fileContent);

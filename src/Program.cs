@@ -4,7 +4,6 @@ using Genocs.CLI;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-
 if (args.Length == 0)
 {
     ShowBot(string.Empty);
@@ -18,12 +17,10 @@ if (args.Length == 0)
     return;
 }
 
-//var version = Assembly.GetEntryAssembly()?
+// var version = Assembly.GetEntryAssembly()?
 //                        .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
 //                        .InformationalVersion;
-
-//WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
-
+// WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
 
 string firstArg = args[0].Trim().ToLower();
 if (firstArg == "install" || firstArg == "i" || firstArg == "update" || firstArg == "u")
@@ -212,7 +209,6 @@ async Task BootstrapWorkerSolution(string projectName)
     await Task.CompletedTask;
 }
 
-
 async Task BootstrapCleanArchitectureSolution(string projectName)
 {
     Console.WriteLine($"Bootstrapping genocs Clean Architecture project at '{projectName}' ...");
@@ -268,17 +264,17 @@ static void WriteSuccessMessage(string message)
     WriteColorConsole(message, ConsoleColor.Green);
 }
 
-static void WriteColorEx(string str, params (string substring, ConsoleColor color)[] colors)
+static void WriteColorEx(string str, params (string Substring, ConsoleColor Color)[] colors)
 {
-    var words = Regex.Split(str, @"( )");
+    string[] words = Regex.Split(str, @"( )");
 
-    foreach (var word in words)
+    foreach (string word in words)
     {
-        (string substring, ConsoleColor color) cl = colors.FirstOrDefault(x => x.substring.Equals("{" + word + "}"));
-        if (cl.substring != null)
+        (string Substring, ConsoleColor Color) cl = colors.FirstOrDefault(x => x.Substring.Equals("{" + word + "}"));
+        if (cl.Substring != null)
         {
-            Console.ForegroundColor = cl.color;
-            Console.Write(cl.substring.Substring(1, cl.substring.Length - 2));
+            Console.ForegroundColor = cl.Color;
+            Console.Write(cl.Substring.Substring(1, cl.Substring.Length - 2));
             Console.ResetColor();
         }
         else
@@ -295,4 +291,5 @@ WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|n
 Console.WriteLine("or with:");
 WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
 Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+
 // WriteColorEx("This is my message with new color with red", ("{message}", ConsoleColor.Red), ("{with}", ConsoleColor.Blue));

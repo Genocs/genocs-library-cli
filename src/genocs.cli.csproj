@@ -15,7 +15,7 @@
         <PackageTags>dotnet-new;templates</PackageTags>
         <RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
         <PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReadmeFile>README_NUGET.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIcon>icon.png</PackageIcon>
         <VersionPrefix>1.0.0</VersionPrefix>
@@ -34,16 +34,21 @@
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>
-        <None Include="README.md">
-            <Pack>True</Pack>
-            <PackagePath>\</PackagePath>
-        </None>
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="genocs.cli.templates.json">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
+        <Compile Update="MainResource.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>MainResource.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="MainResource.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>MainResource.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
     </ItemGroup>
 
 </Project>

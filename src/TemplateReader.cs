@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+﻿using genocs.cli;
 
 internal class TemplateReader
 {
@@ -8,13 +8,7 @@ internal class TemplateReader
     /// <returns>List of Items.</returns>
     public static List<string>? GetTemplates()
     {
-        const string resourceName = "genocs.cli.templates.json";
-
-        // Read json file
-        string fileContent = File.ReadAllText(resourceName);
-
-        // Deserialize json
-        return JsonSerializer.Deserialize<List<string>>(fileContent);
+        return MainResource.Templates.Split(",").ToList();
     }
 }
 

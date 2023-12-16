@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using genocs.cli;
 using Genocs.CLI;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -169,7 +170,7 @@ static void WriteColor(string message, ConsoleColor color)
 
 async Task InstallTemplates()
 {
-    foreach (string template in TemplateReader.GetTemplates())
+    foreach (string template in MainResource.Templates.Split(",").ToList())
     {
         Console.WriteLine($"Installing {template} template...");
         var psi = new ProcessStartInfo

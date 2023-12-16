@@ -1,4 +1,4 @@
-<!-- PROJECT SHIELDS -->
+﻿<!-- PROJECT SHIELDS -->
 [![License][license-shield]][license-url]
 [![Build][build-shield]][build-url]
 [![Packages][package-shield]][package-url]
@@ -17,10 +17,10 @@
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
 [build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.0.7-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.0.3-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
-[downloads-url]: https://www.nuget.org/packages/Genocs.CLI
+[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.Library.Template.svg?color=2da44e&label=downloads&logo=nuget
+[downloads-url]: https://www.nuget.org/packages/Genocs.Library.Template
 [contributors-shield]: https://img.shields.io/github/contributors/Genocs/genocs-library-cli.svg?style=flat-square
 [contributors-url]: https://github.com/Genocs/genocs-library-cli/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Genocs/genocs-library-cli?style=flat-square
@@ -40,6 +40,9 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
+[![logo](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-cli)
+
+
 # Genocs cli
 
 Another component for the Genocs ecosystem.
@@ -56,6 +59,8 @@ Here where you can find the official Documentation:
 ## Supported runtime
 
 Genocs cli can be used on .NET6, .NET7, .NET8 runtimes.
+
+Please check the GitHub repository getting more info.
 
 ---
 
@@ -78,28 +83,43 @@ dotnet tool uninstall -g genocs.cli
 ```
 
 
-Useful commands to work on your own 
-``` bash
-cd ./src
-# build the project 
-dotnet build genocs.cli.csproj
+## Release notes
 
-# Pack the tool (to be deployed on nuget) 
-dotnet pack -p:PackageVersion={semver} --output nupkgs
-dotnet pack --output nupkgs
+### [2023-12-16] 1.0.3
+- Fix Issue on resource
 
-# Run the tool to install the templates
-dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i
+### [2023-12-16] 1.0.2
+- NET8 support
 
-# Run the tool to install the templates (some as above with cd command)
-cd ./src
-dotnet run -f net7.0 genocs -i
+### [2023-12-16] 1.0.1
+- NET8 support
 
-# Install the tool from local folder to the global cache
-dotnet tool install --global --add-source ./nupkgs genocs.cli
-```
+### [2023-12-16] 1.0.0
+- NET8 support
 
+### [2023-09-01] 0.0.8
+- Updated templates
 
+### [2023-08-13] 0.0.7
+- Updated banner plus fix weird behavior
+
+### [2023-07-23] 0.0.6
+- Added gnx-webapi support
+
+### [2023-07-10] 0.0.5
+- Fix crash in case of leading and trailing spaces
+
+### [2023-07-10] 0.0.4
+- Added capitalCase on the project name
+
+### [2023-06-03] 0.0.3
+- Updated syntax to .Net 7.0
+
+### [2023-06-02] 0.0.2
+- Completed list of templates
+
+### [2023-03-12] 0.0.1
+- First release
 
 ## License
 
@@ -107,7 +127,7 @@ This project is licensed with the [MIT license](LICENSE).
 
 ## Changelogs
 
-View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOGS.md).
+View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md).
 
 ## Community
 
@@ -119,26 +139,20 @@ View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/mai
 ## Support
 
 Has this Project helped you learn something New? or Helped you at work?
+
 Here are a few ways by which you can support.
 
-- ⭐ Leave a star! 
+- ⭐ Leave a star!
 - 🥇 Recommend this project to your colleagues.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/) 
-- ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
- 
-<a href="https://www.buymeacoffee.com/genocs"><img width="250" alt="black-button" src="https://user-images.githubusercontent.com/31455818/138557309-27587d91-7b82-4cab-96bb-90f4f4e600f1.png" ></a>
+- ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
+  
 
-## Code Contributors
+[![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
-This project exists thanks to all the people who contribute. [Submit your PR and join the team!](CONTRIBUTING.md)
-
-[![genocs contributors](https://contrib.rocks/image?repo=Genocs/genocs-library-cli "genocs contributors")](https://github.com/genocs/genocs-library-cli/graphs/contributors)
 
 ## Financial Contributors
 
-Become a financial contributor and help me sustain the project. [Support the Project!](https://opencollective.com/genocs/contribute)
+Become a financial contributor and help me sustain the project.
 
-<a href="https://opencollective.com/genocs"><img src="https://opencollective.com/genocs/individuals.svg?width=890"></a>
-
-
-## Acknowledgements
+**Support the Project** on [Opencollective](https://opencollective.com/genocs).

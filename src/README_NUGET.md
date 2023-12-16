@@ -1,6 +1,5 @@
 ﻿<!-- PROJECT SHIELDS -->
 [![License][license-shield]][license-url]
-[![Build][build-shield]][build-url]
 [![Packages][package-shield]][package-url]
 [![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -15,12 +14,11 @@
 
 [license-shield]: https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
-[build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [package-shield]: https://img.shields.io/badge/nuget-v.1.0.3-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.Library.Template.svg?color=2da44e&label=downloads&logo=nuget
-[downloads-url]: https://www.nuget.org/packages/Genocs.Library.Template
+[downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
+[downloads-url]: https://www.nuget.org/packages/Genocs.CLI
 [contributors-shield]: https://img.shields.io/github/contributors/Genocs/genocs-library-cli.svg?style=flat-square
 [contributors-url]: https://github.com/Genocs/genocs-library-cli/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Genocs/genocs-library-cli?style=flat-square
@@ -146,7 +144,7 @@ Here are a few ways by which you can support.
 - 🥇 Recommend this project to your colleagues.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/) 
 - ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
-  
+
 
 [![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
@@ -155,4 +153,4 @@ Here are a few ways by which you can support.
 
 Become a financial contributor and help me sustain the project.
 
-**Support the Project** on [Opencollective](https://opencollective.com/genocs).
+**Support the Project** on [Opencollective](https://opencollective.com/genocs/contribute).

@@ -17,7 +17,7 @@
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
 [build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.0.7-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.0.3-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
@@ -40,6 +40,9 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
+[![logo](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-cli)
+
+
 # Genocs cli
 
 Another component for the Genocs ecosystem.
@@ -56,6 +59,8 @@ Here where you can find the official Documentation:
 ## Supported runtime
 
 Genocs cli can be used on .NET6, .NET7, .NET8 runtimes.
+
+Please check the GitHub repository getting more info.
 
 ---
 
@@ -107,7 +112,7 @@ This project is licensed with the [MIT license](LICENSE).
 
 ## Changelogs
 
-View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOGS.md).
+View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md).
 
 ## Community
 
@@ -119,12 +124,13 @@ View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/mai
 ## Support
 
 Has this Project helped you learn something New? or Helped you at work?
+
 Here are a few ways by which you can support.
 
-- ⭐ Leave a star! 
+- ⭐ Leave a star!
 - 🥇 Recommend this project to your colleagues.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/) 
-- ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
+- ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
  
 <a href="https://www.buymeacoffee.com/genocs"><img width="250" alt="black-button" src="https://user-images.githubusercontent.com/31455818/138557309-27587d91-7b82-4cab-96bb-90f4f4e600f1.png" ></a>
 
@@ -136,7 +142,9 @@ This project exists thanks to all the people who contribute. [Submit your PR and
 
 ## Financial Contributors
 
-Become a financial contributor and help me sustain the project. [Support the Project!](https://opencollective.com/genocs/contribute)
+Become a financial contributor and help me sustain the project.
+
+**Support the Project** on [Opencollective](https://opencollective.com/genocs).
 
 <a href="https://opencollective.com/genocs"><img src="https://opencollective.com/genocs/individuals.svg?width=890"></a>
 

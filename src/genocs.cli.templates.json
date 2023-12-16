@@ -1,1 +1,1 @@
-[ "Genocs.CleanArchitectureTemplate", "Genocs.WebApiTemplate", "Genocs.BlazorTemplate", "Genocs.MicroserviceTemplate", "Genocs.Microservice.Template" ]
+[ "Genocs.CleanArchitectureTemplate", "Genocs.Microservice.Template", "Genocs.Library.Template", "Genocs.BlazorClean.Template", "Genocs.BlazorWasm.Template" ]

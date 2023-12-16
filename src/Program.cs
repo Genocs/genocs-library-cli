@@ -4,7 +4,6 @@ using Genocs.CLI;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-
 if (args.Length == 0)
 {
     ShowBot(string.Empty);
@@ -18,12 +17,11 @@ if (args.Length == 0)
     return;
 }
 
-//var version = Assembly.GetEntryAssembly()?
+// var version = Assembly.GetEntryAssembly()?
 //                        .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
 //                        .InformationalVersion;
 
-//WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
-
+// WriteColorConsole(Figgle.FiggleFonts.Doom.Render($"genocs v{version}"), ConsoleColor.DarkGreen);
 
 string firstArg = args[0].Trim().ToLower();
 if (firstArg == "install" || firstArg == "i" || firstArg == "update" || firstArg == "u")
@@ -121,7 +119,7 @@ if (firstArg == "cleanapi")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapCleanArchitectureSolution(projectName);
+        await BootstrapCleanArchitectureSolutionAsync(projectName);
     }
 
     return;
@@ -200,20 +198,19 @@ async Task BootstrapAngularSolution(string projectName)
     await Task.CompletedTask;
 }
 
-async Task BootstrapReactSolution(string projectName)
+async Task BootstrapReactSolutionAsync(string projectName)
 {
     Console.WriteLine($"React Template not available ...");
     await Task.CompletedTask;
 }
 
-async Task BootstrapWorkerSolution(string projectName)
+async Task BootstrapWorkerSolutionAsync(string projectName)
 {
     Console.WriteLine($"Worker Template not available ...");
     await Task.CompletedTask;
 }
 
-
-async Task BootstrapCleanArchitectureSolution(string projectName)
+async Task BootstrapCleanArchitectureSolutionAsync(string projectName)
 {
     Console.WriteLine($"Bootstrapping genocs Clean Architecture project at '{projectName}' ...");
     var psi = new ProcessStartInfo
@@ -270,9 +267,9 @@ static void WriteSuccessMessage(string message)
 
 static void WriteColorEx(string str, params (string substring, ConsoleColor color)[] colors)
 {
-    var words = Regex.Split(str, @"( )");
+    string[] words = Regex.Split(str, @"( )");
 
-    foreach (var word in words)
+    foreach (string word in words)
     {
         (string substring, ConsoleColor color) cl = colors.FirstOrDefault(x => x.substring.Equals("{" + word + "}"));
         if (cl.substring != null)

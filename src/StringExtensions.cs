@@ -13,7 +13,7 @@ public static class StringExtensions
         }
 
         // Split the string into words separated by a space character or period
-        var splitString = str.Trim().Split(' ', '.');
+        string[] splitString = str.Trim().Split(' ', '.');
         var sb = new StringBuilder();
         foreach (var word in splitString)
         {

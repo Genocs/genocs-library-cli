@@ -1,6 +1,6 @@
 # Genocs Library Cli
 
-The genocs cli to use for Genocs Templates
+The Genocs cli to use for Genocs Templates
 
 ## Description
 
@@ -13,6 +13,9 @@ Please check the GitHub repository getting more info.
 
 
 ## Release notes
+
+### [2023-12-16] 1.0.0
+- NET8 support
 
 ### [2023-09-01] 0.0.8
 - Updated templates

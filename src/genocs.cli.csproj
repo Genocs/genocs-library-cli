@@ -3,16 +3,18 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <PackageId>Genocs.CLI</PackageId>
+        <RootNamespace>Genocs.CLI</RootNamespace>
+        <AssemblyName>Genocs.CLI</AssemblyName>
+        <Title>Genocs CLI Tool.</Title>
+        <Description>The Genocs CLI Tool to run .NET8 templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
         <PackageVersion>1.0.0</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
-        <PackageId>Genocs.CLI</PackageId>
-        <Title>Genocs CLI Tool</Title>
         <Authors>Nocco Giovanni Emanuele</Authors>
         <Copyright>Copyright (c) 2023 Genocs Services</Copyright>
-        <Description>Genocs CLI tool to use Genocs Templates.</Description>
-        <PackageTags>dotnet-new;templates</PackageTags>
+        <PackageTags>dotnet-tool;templates</PackageTags>
         <RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
         <PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>
         <PackageReadmeFile>README_NUGET.md</PackageReadmeFile>

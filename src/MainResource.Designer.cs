@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace genocs.cli {
+namespace Genocs.CLI {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace genocs.cli {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("genocs.cli.MainResource", typeof(MainResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Genocs.CLI.MainResource", typeof(MainResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace genocs.cli {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Genocs.CleanArchitectureTemplate, Genocs.Microservice.Template, Genocs.Library.Template, Genocs.BlazorClean.Template, Genocs.BlazorWasm.Template.
+        ///   Looks up a localized string similar to Genocs.CleanArchitecture.Template,Genocs.Library.Template,Genocs.Microservice.Template,Genocs.BlazorClean.Template,Genocs.BlazorWasm.Template.
         /// </summary>
         internal static string Templates {
             get {

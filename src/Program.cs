@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using genocs.cli;
 using Genocs.CLI;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -11,9 +10,7 @@ if (args.Length == 0)
     Console.WriteLine("Missing params. Use following syntax:");
     WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
     Console.WriteLine("then follow with:");
-    WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
-    Console.WriteLine("or with:");
-    WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
+    WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
     Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
     return;
 }
@@ -44,17 +41,17 @@ if (firstArg == "angular")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapAngularSolution(projectName);
+        await BootstrapAngularSolutionAsync(projectName);
     }
 
     return;
 }
 
-if (firstArg == "blazor")
+if (firstArg == "react")
 {
     if (args.Length != 3)
     {
-        Console.WriteLine("Invalid command. Use something like: genocs blazor new <CompanyName.ProjectName>");
+        Console.WriteLine("Invalid command. Use something like: genocs react new <CompanyName.ProjectName>");
         return;
     }
 
@@ -63,17 +60,17 @@ if (firstArg == "blazor")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapBlazorSolution(projectName);
+        await BootstrapReactSolutionAsync(projectName);
     }
 
     return;
 }
 
-if (firstArg == "worker")
+if (firstArg == "blazor-clean")
 {
     if (args.Length != 3)
     {
-        Console.WriteLine("Invalid command. Use something like: genocs worker new <CompanyName.ProjectName>");
+        Console.WriteLine("Invalid command. Use something like: genocs blazor-clean n <CompanyName.ProjectName>");
         return;
     }
 
@@ -82,17 +79,17 @@ if (firstArg == "worker")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapBlazorSolution(projectName);
+        await BootstrapBlazorCleanSolutionAsync(projectName);
     }
 
     return;
 }
 
-if (firstArg == "webapi")
+if (firstArg == "blazor-wasm")
 {
     if (args.Length != 3)
     {
-        Console.WriteLine("Invalid command. Use something like: genocs webapi new <CompanyName.ProjectName>");
+        Console.WriteLine("Invalid command. Use something like: genocs blazor-wasm n <CompanyName.ProjectName>");
         return;
     }
 
@@ -101,17 +98,17 @@ if (firstArg == "webapi")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapMicroserviceSolution(projectName);
+        await BootstrapBlazorWasmSolutionAsync(projectName);
     }
 
     return;
 }
 
-if (firstArg == "cleanapi")
+if (firstArg == "clean-webapi")
 {
     if (args.Length != 3)
     {
-        Console.WriteLine("Invalid command. Use something like: genocs cleanapi new <CompanyName.ProjectName>");
+        Console.WriteLine("Invalid command. Use something like: genocs clean-webapi new <CompanyName.ProjectName>");
         return;
     }
 
@@ -120,7 +117,45 @@ if (firstArg == "cleanapi")
 
     if (command == "n" || command == "new")
     {
-        await BootstrapCleanArchitectureSolutionAsync(projectName);
+        await BootstrapCleanWebApiSolutionAsync(projectName);
+    }
+
+    return;
+}
+
+if (firstArg == "libra-webapi")
+{
+    if (args.Length != 3)
+    {
+        Console.WriteLine("Invalid command. Use something like: genocs libra-webapi new <CompanyName.ProjectName>");
+        return;
+    }
+
+    string command = args[1].Trim().ToLower();
+    string projectName = args[2].Trim().ToCapitalCase();
+
+    if (command == "n" || command == "new")
+    {
+        await BootstrapLibraWebApiSolution(projectName);
+    }
+
+    return;
+}
+
+if (firstArg == "micro-webapi")
+{
+    if (args.Length != 3)
+    {
+        Console.WriteLine("Invalid command. Use something like: genocs micro-webapi new <CompanyName.ProjectName>");
+        return;
+    }
+
+    string command = args[1].Trim().ToLower();
+    string projectName = args[2].Trim().ToCapitalCase();
+
+    if (command == "n" || command == "new")
+    {
+        await BootstrapMicroWebApiSolution(projectName);
     }
 
     return;
@@ -187,13 +222,11 @@ async Task InstallTemplates()
     WriteSuccessMessage("Type: dotnet new list to see the whole set of dotnet templates.");
 
     Console.WriteLine("Get started by typing:");
-    WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
-    Console.WriteLine("or with:");
-    WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
+    WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
     Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
 }
 
-async Task BootstrapAngularSolution(string projectName)
+async Task BootstrapAngularSolutionAsync(string projectName)
 {
     Console.WriteLine($"Angular Template not available ...");
     await Task.CompletedTask;
@@ -205,15 +238,39 @@ async Task BootstrapReactSolutionAsync(string projectName)
     await Task.CompletedTask;
 }
 
-async Task BootstrapWorkerSolutionAsync(string projectName)
+async Task BootstrapBlazorCleanSolutionAsync(string projectName)
 {
-    Console.WriteLine($"Worker Template not available ...");
-    await Task.CompletedTask;
+    Console.WriteLine($"Bootstrapping Genocs: Blazor Clean WebAssembly Solution at '{projectName}' ...");
+    var psi = new ProcessStartInfo
+    {
+        FileName = "dotnet",
+        Arguments = $"new gnx-blazorclean -n {projectName} -o {projectName} -v=q"
+    };
+
+    using var proc = Process.Start(psi)!;
+    await proc.WaitForExitAsync();
+    WriteSuccessMessage($"Genocs: Blazor Clean WebAssembly Solution '{projectName}' successfully created.");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
-async Task BootstrapCleanArchitectureSolutionAsync(string projectName)
+async Task BootstrapBlazorWasmSolutionAsync(string projectName)
 {
-    Console.WriteLine($"Bootstrapping genocs Clean Architecture project at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Genocs: Blazor WebAssembly Solution at '{projectName}' ...");
+    var psi = new ProcessStartInfo
+    {
+        FileName = "dotnet",
+        Arguments = $"new gnx-blazorwasm -n {projectName} -o {projectName} -v=q"
+    };
+
+    using var proc = Process.Start(psi)!;
+    await proc.WaitForExitAsync();
+    WriteSuccessMessage($"Genocs: Blazor WebAssembly Solution '{projectName}' successfully created.");
+    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+}
+
+async Task BootstrapCleanWebApiSolutionAsync(string projectName)
+{
+    Console.WriteLine($"Bootstrapping Genocs Microservice (Clean Architecture - Onion) solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -221,13 +278,13 @@ async Task BootstrapCleanArchitectureSolutionAsync(string projectName)
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs Clean Architecture solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Genocs Microservice (Clean Architecture - Onion) solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
-async Task BootstrapMicroserviceSolution(string projectName)
+async Task BootstrapLibraWebApiSolution(string projectName)
 {
-    Console.WriteLine($"Bootstrapping genocs Microservice project at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Genocs Microservice (with Genocs library) solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -235,22 +292,21 @@ async Task BootstrapMicroserviceSolution(string projectName)
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs Microservice solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Genocs Genocs Microservice (with Genocs Library) solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
-async Task BootstrapBlazorSolution(string projectName)
+async Task BootstrapMicroWebApiSolution(string projectName)
 {
-    Console.WriteLine($"Bootstrapping genocs Blazor WebAssembly solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Genocs Microservice (with Multitenancy) solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
-        Arguments = $"new gnx-blazor -n {projectName} -o {projectName} -v=q"
+        Arguments = $"new gnx-microservice -n {projectName} -o {projectName} -v=q"
     };
-
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs blazor solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Genocs Genocs Microservice (with Multitenancy) solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 

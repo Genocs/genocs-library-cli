@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Templates" xml:space="preserve">
-    <value>Genocs.CleanArchitectureTemplate, Genocs.Microservice.Template, Genocs.Library.Template, Genocs.BlazorClean.Template, Genocs.BlazorWasm.Template</value>
+    <value>Genocs.CleanArchitecture.Template,Genocs.Library.Template,Genocs.Microservice.Template,Genocs.BlazorClean.Template,Genocs.BlazorWasm.Template</value>
   </data>
 </root>

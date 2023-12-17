@@ -60,6 +60,9 @@ Genocs cli can be used on .NET6, .NET7, .NET8 runtimes.
 
 Please check the GitHub repository getting more info.
 
+## Documentation: [Genocs Library - CLI](https://genocs-blog.netlify.app/cli/)
+
+
 ---
 
 Useful commands 

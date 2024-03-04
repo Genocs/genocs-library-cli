@@ -15,7 +15,7 @@
 [license-shield]: https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.1.0.3-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.0.5-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
@@ -85,6 +85,12 @@ dotnet tool uninstall -g genocs.cli
 
 
 ## Release notes
+
+### [2024-03-04] 1.0.5
+- Updated NuGet packages
+
+### [2023-12-16] 1.0.4
+- Fix Issue on resource
 
 ### [2023-12-16] 1.0.3
 - Fix Issue on resource

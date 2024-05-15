@@ -47,16 +47,16 @@ Another component for the Genocs ecosystem.
 
 ## Introduction
 
-Genocs cli is the Genocs **dotnet tool**  that allow you to use Genocs templates.
+Genocs cli is the Genocs **dotnet tool** that allow you to use Genocs templates.
 Genocs templates are dotnet template that will help you to setup quick and easy your microservice solution.
 
-Here where you can find the official Documentation:
+Here where you can find the Dotnet tools official Documentation:
 - [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
 
 ## Supported runtime
 
-Genocs cli can be used on .NET6, .NET7, .NET8 runtimes.
+Genocs cli can be used on .NET8 runtimes.
 
 Please check the GitHub repository getting more info.
 
@@ -85,6 +85,9 @@ dotnet tool uninstall -g genocs.cli
 
 
 ## Release notes
+
+### [2024-05-15] 1.0.6
+- Updated NuGet packages
 
 ### [2024-03-04] 1.0.5
 - Updated NuGet packages

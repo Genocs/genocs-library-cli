@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0</TargetFrameworks>
         <PackageId>Genocs.CLI</PackageId>
         <RootNamespace>Genocs.CLI</RootNamespace>
         <AssemblyName>Genocs.CLI</AssemblyName>
@@ -13,7 +13,7 @@
         <PackageVersion>1.0.0</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <Authors>Nocco Giovanni Emanuele</Authors>
-        <Copyright>Copyright (c) 2023 Genocs Services</Copyright>
+        <Copyright>Copyright (c) 2024 Genocs Services</Copyright>
         <PackageTags>dotnet-tool;templates</PackageTags>
         <RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
         <PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>

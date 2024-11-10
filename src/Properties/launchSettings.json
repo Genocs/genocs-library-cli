@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "genocs.cli": {
+    "gnx-cli": {
       "commandName": "Project",
       "commandLineArgs": "u"
     }

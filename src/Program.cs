@@ -2,16 +2,12 @@
 
 using Genocs.CLI;
 using System.Diagnostics;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 if (args.Length == 0)
 {
     ShowBot(string.Empty);
-    Console.WriteLine("Missing params. Use following syntax:");
-    WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
-    Console.WriteLine("then follow with:");
-    WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
-    Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
     return;
 }
 
@@ -161,6 +157,16 @@ if (firstArg == "micro-webapi")
     return;
 }
 
+if (firstArg == "h" || firstArg == "help")
+{
+    WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
+    Console.WriteLine("then follow with:");
+    WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
+    Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+
+    return;
+}
+
 // Fallback
 WriteColorConsole("Sorry I don't understand your command!", ConsoleColor.DarkRed);
 WriteColorConsole("Accepted syntax is something like:", ConsoleColor.Cyan);
@@ -180,6 +186,10 @@ static void ShowBot(string message)
 ..######...########.##....##..#######...######...######............######..########.####
 ";
     WriteColorConsole(bot, ConsoleColor.Blue);
+    WriteColorConsole($"Runtime: {Environment.Version}", ConsoleColor.DarkGreen);
+    WriteColorConsole($"Version: {Assembly.GetExecutingAssembly().GetName().Version}", ConsoleColor.DarkGreen);
+    WriteColorConsole($"Please type: 'genocs help' to get more info.", ConsoleColor.Blue);
+
 }
 
 static void WriteColor(string message, ConsoleColor color)
@@ -288,7 +298,7 @@ async Task BootstrapLibraWebApiSolution(string projectName)
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
-        Arguments = $"new gnx-webapi -n {projectName} -o {projectName} -v=q"
+        Arguments = $"new gnx-librawebapi -n {projectName} -o {projectName} -v=q"
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
@@ -322,17 +332,17 @@ static void WriteSuccessMessage(string message)
     WriteColorConsole(message, ConsoleColor.Green);
 }
 
-static void WriteColorEx(string str, params (string substring, ConsoleColor color)[] colors)
+static void WriteColorEx(string str, params (string SubString, ConsoleColor Color)[] colors)
 {
     string[] words = Regex.Split(str, @"( )");
 
     foreach (string word in words)
     {
-        (string substring, ConsoleColor color) cl = colors.FirstOrDefault(x => x.substring.Equals("{" + word + "}"));
-        if (cl.substring != null)
+        (string SubString, ConsoleColor Color) cl = colors.FirstOrDefault(x => x.SubString.Equals("{" + word + "}"));
+        if (cl.SubString != null)
         {
-            Console.ForegroundColor = cl.color;
-            Console.Write(cl.substring.Substring(1, cl.substring.Length - 2));
+            Console.ForegroundColor = cl.Color;
+            Console.Write(cl.SubString.Substring(1, cl.SubString.Length - 2));
             Console.ResetColor();
         }
         else

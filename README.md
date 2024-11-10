@@ -45,8 +45,6 @@
 
 # Genocs cli
 
-Another component for the Genocs ecosystem.
-
 ## Introduction
 
 Genocs cli is the Genocs **dotnet tool** that allow you to use Genocs templates.
@@ -97,11 +95,11 @@ dotnet pack -p:PackageVersion={semver} --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates
-dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i
+dotnet run -f net8.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net7.0 genocs -i
+dotnet run -f net8.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkgs genocs.cli

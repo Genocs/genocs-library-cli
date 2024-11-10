@@ -43,7 +43,6 @@
 
 # Genocs cli
 
-Another component for the Genocs ecosystem.
 
 ## Introduction
 

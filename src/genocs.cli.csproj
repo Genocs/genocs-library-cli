@@ -2,12 +2,12 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>net8.0</TargetFrameworks>
+        <TargetFrameworks>net9.0</TargetFrameworks>
         <PackageId>Genocs.CLI</PackageId>
         <RootNamespace>Genocs.CLI</RootNamespace>
         <AssemblyName>Genocs.CLI</AssemblyName>
         <Title>Genocs CLI Tool.</Title>
-        <Description>The Genocs CLI Tool to run .NET8 templates.</Description>
+        <Description>The Genocs CLI Tool to run .NET9 templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
         <PackageVersion>1.0.0</PackageVersion>

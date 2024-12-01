@@ -250,7 +250,7 @@ async Task BootstrapReactSolutionAsync(string projectName)
 
 async Task BootstrapBlazorCleanSolutionAsync(string projectName)
 {
-    Console.WriteLine($"Bootstrapping Genocs: Blazor Clean WebAssembly Solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Blazor Clean WebAssembly Solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -259,13 +259,13 @@ async Task BootstrapBlazorCleanSolutionAsync(string projectName)
 
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs: Blazor Clean WebAssembly Solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Blazor Clean WebAssembly Solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapBlazorWasmSolutionAsync(string projectName)
 {
-    Console.WriteLine($"Bootstrapping Genocs: Blazor WebAssembly Solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Blazor WebAssembly Solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -274,13 +274,13 @@ async Task BootstrapBlazorWasmSolutionAsync(string projectName)
 
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs: Blazor WebAssembly Solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Blazor WebAssembly Solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapCleanWebApiSolutionAsync(string projectName)
 {
-    Console.WriteLine($"Bootstrapping Genocs Microservice (Clean Architecture - Onion) solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Microservice (Clean Architecture - Onion) solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -288,13 +288,13 @@ async Task BootstrapCleanWebApiSolutionAsync(string projectName)
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs Microservice (Clean Architecture - Onion) solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Microservice (Clean Architecture - Onion) Solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapLibraWebApiSolution(string projectName)
 {
-    Console.WriteLine($"Bootstrapping Genocs Microservice (with Genocs library) solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Microservice (with Genocs library) Solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -302,13 +302,13 @@ async Task BootstrapLibraWebApiSolution(string projectName)
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs Genocs Microservice (with Genocs Library) solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Microservice (with Genocs Library) solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
 async Task BootstrapMicroWebApiSolution(string projectName)
 {
-    Console.WriteLine($"Bootstrapping Genocs Microservice (with Multitenancy) solution at '{projectName}' ...");
+    Console.WriteLine($"Bootstrapping Microservice (with Multitenancy) solution at '{projectName}' ...");
     var psi = new ProcessStartInfo
     {
         FileName = "dotnet",
@@ -316,7 +316,7 @@ async Task BootstrapMicroWebApiSolution(string projectName)
     };
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
-    WriteSuccessMessage($"Genocs Genocs Microservice (with Multitenancy) solution '{projectName}' successfully created.");
+    WriteSuccessMessage($"Microservice (with Multitenancy) Solution '{projectName}' successfully created.");
     Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
 }
 
@@ -359,4 +359,5 @@ WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|n
 Console.WriteLine("or with:");
 WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
 Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+
 // WriteColorEx("This is my message with new color with red", ("{message}", ConsoleColor.Red), ("{with}", ConsoleColor.Blue));

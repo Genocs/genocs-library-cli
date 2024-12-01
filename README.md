@@ -17,7 +17,7 @@
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
 [build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.1.0.6-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.0.7-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
@@ -56,7 +56,7 @@ Here where you can find the Dotnet tools official Documentation:
 
 ## Supported runtime
 
-Genocs cli can be used on .NET8 runtimes.
+Genocs cli can be used on .NET9 runtimes.
 
 Please check the GitHub repository getting more info.
 
@@ -95,11 +95,11 @@ dotnet pack -p:PackageVersion={semver} --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates
-dotnet run -f net8.0 --project ./src/genocs.cli.csproj genocs -i
+dotnet run -f net9.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net8.0 genocs -i
+dotnet run -f net9.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkgs genocs.cli

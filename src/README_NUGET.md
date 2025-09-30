@@ -83,6 +83,24 @@ dotnet tool uninstall -g genocs.cli
 
 ## Release notes
 
+### [2025-09-30] 1.2.0
+
+- Bump Roslynator.Analyzers from 4.12.9 to 4.13.1
+- Update GitHub Actions to use latest checkout and setup-dotnet actions
+- Various improvements and bug fixes
+
+### [2024-12-01] 1.1.0
+
+- Update to .NET 9 and improve project setup
+- Update README.md to reflect NuGet package version changes
+- Various fixes and updates
+
+### [2024-11-10] 1.0.7
+
+- Fix missing resources
+- Fix naming convention
+- Updated packages and fix missing json file
+
 ### [2024-05-15] 1.0.6
 
 - Updated NuGet packages

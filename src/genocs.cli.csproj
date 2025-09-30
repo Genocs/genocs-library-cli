@@ -10,10 +10,10 @@
         <Description>The Genocs CLI Tool to run .NET9 templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.2.0</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <Authors>Nocco Giovanni Emanuele</Authors>
-        <Copyright>Copyright (c) 2024 Genocs Services</Copyright>
+        <Copyright>Copyright (c) 2025 Genocs Services</Copyright>
         <PackageTags>dotnet-tool;templates</PackageTags>
         <RepositoryUrl>https://github.com/Genocs/genocs-library-cli</RepositoryUrl>
         <PackageProjectUrl>https://blog.genocs.com/</PackageProjectUrl>

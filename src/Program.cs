@@ -162,7 +162,7 @@ if (firstArg == "h" || firstArg == "help")
     WriteColorConsole("    genocs [i|install|u|update]", ConsoleColor.Cyan);
     Console.WriteLine("then follow with:");
     WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
-    Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+    Console.WriteLine("\nPlease refer to https://learn.fiscanner.net/");
 
     return;
 }
@@ -233,7 +233,7 @@ async Task InstallTemplates()
 
     Console.WriteLine("Get started by typing:");
     WriteColorConsole("    genocs [blazor-clean|blazor-wasm|clean-webapi|libra-webapi|micro-webapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
-    Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+    Console.WriteLine("\nPlease refer to https://learn.fiscanner.net/");
 }
 
 async Task BootstrapAngularSolutionAsync(string projectName)
@@ -260,7 +260,7 @@ async Task BootstrapBlazorCleanSolutionAsync(string projectName)
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Blazor Clean WebAssembly Solution '{projectName}' successfully created.");
-    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+    Console.WriteLine("Refer to documentation at https://learn.fiscanner.net/");
 }
 
 async Task BootstrapBlazorWasmSolutionAsync(string projectName)
@@ -275,7 +275,7 @@ async Task BootstrapBlazorWasmSolutionAsync(string projectName)
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Blazor WebAssembly Solution '{projectName}' successfully created.");
-    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+    Console.WriteLine("Refer to documentation at https://learn.fiscanner.net/");
 }
 
 async Task BootstrapCleanWebApiSolutionAsync(string projectName)
@@ -289,7 +289,7 @@ async Task BootstrapCleanWebApiSolutionAsync(string projectName)
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Microservice (Clean Architecture - Onion) Solution '{projectName}' successfully created.");
-    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+    Console.WriteLine("Refer to documentation at https://learn.fiscanner.net/");
 }
 
 async Task BootstrapLibraWebApiSolution(string projectName)
@@ -303,7 +303,7 @@ async Task BootstrapLibraWebApiSolution(string projectName)
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Microservice (with Genocs Library) solution '{projectName}' successfully created.");
-    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+    Console.WriteLine("Refer to documentation at https://learn.fiscanner.net/");
 }
 
 async Task BootstrapMicroWebApiSolution(string projectName)
@@ -317,7 +317,7 @@ async Task BootstrapMicroWebApiSolution(string projectName)
     using var proc = Process.Start(psi)!;
     await proc.WaitForExitAsync();
     WriteSuccessMessage($"Microservice (with Multitenancy) Solution '{projectName}' successfully created.");
-    Console.WriteLine("Refer to documentation at https://genocs-blog.netlify.app/");
+    Console.WriteLine("Refer to documentation at https://learn.fiscanner.net/");
 }
 
 static void WriteColorConsole(string message, ConsoleColor color)
@@ -358,6 +358,6 @@ Console.WriteLine("Than follow with:");
 WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <CompanyName.ProjectName.ServiceName>", ConsoleColor.Cyan);
 Console.WriteLine("or with:");
 WriteColorConsole("    genocs [blazor|webapi|worker|cleanapi|angular|react] [n|new] <ServiceName>", ConsoleColor.Cyan);
-Console.WriteLine("\nPlease refer to https://genocs-blog.netlify.app/");
+Console.WriteLine("\nPlease refer to https://learn.fiscanner.net/");
 
 // WriteColorEx("This is my message with new color with red", ("{message}", ConsoleColor.Red), ("{with}", ConsoleColor.Blue));

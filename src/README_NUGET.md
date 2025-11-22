@@ -1,6 +1,7 @@
 ﻿<!-- PROJECT SHIELDS -->
 
 [![License][license-shield]][license-url]
+[![Build][build-shield]][build-url]
 [![Packages][package-shield]][package-url]
 [![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -15,8 +16,9 @@
 
 [license-shield]: https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
+[build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.1.2.0-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.3.0-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
@@ -39,7 +41,26 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
-[![logo](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-cli)
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/genocs/genocs-library-cli">
+    <img src="https://raw.githubusercontent.com/genocs/genocs-library-cli/main/assets/genocs-library-logo.png" alt=".NET Microservice Template">
+  </a>
+  <h3 align="center">.NET CLI</h3>
+  <p align="center">
+    Open Source CLI For .NET10 Microservice
+    <br />
+    <a href="https://learn.fiscanner.net"><strong>Read the Documentation »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Feature</a>
+    .
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Documentation</a>
+  </p>
+</p>
+
 
 # Genocs cli
 
@@ -58,7 +79,7 @@ Genocs cli can be used on .NET9 runtimes.
 
 Please check the GitHub repository getting more info.
 
-## Documentation: [Genocs Library - CLI](https://genocs-blog.netlify.app/cli/)
+## Documentation: [Genocs Library - CLI](https://learn.fiscanner.net/cli/)
 
 ---
 
@@ -81,93 +102,14 @@ dotnet tool update -g genocs.cli
 dotnet tool uninstall -g genocs.cli
 ```
 
-## Release notes
 
-### [2025-09-30] 1.2.0
+## Changelogs
 
-- Bump Roslynator.Analyzers from 4.12.9 to 4.13.1
-- Update GitHub Actions to use latest checkout and setup-dotnet actions
-- Various improvements and bug fixes
-
-### [2024-12-01] 1.1.0
-
-- Update to .NET 9 and improve project setup
-- Update README.md to reflect NuGet package version changes
-- Various fixes and updates
-
-### [2024-11-10] 1.0.7
-
-- Fix missing resources
-- Fix naming convention
-- Updated packages and fix missing json file
-
-### [2024-05-15] 1.0.6
-
-- Updated NuGet packages
-
-### [2024-03-04] 1.0.5
-
-- Updated NuGet packages
-
-### [2023-12-16] 1.0.4
-
-- Fix Issue on resource
-
-### [2023-12-16] 1.0.3
-
-- Fix Issue on resource
-
-### [2023-12-16] 1.0.2
-
-- NET8 support
-
-### [2023-12-16] 1.0.1
-
-- NET8 support
-
-### [2023-12-16] 1.0.0
-
-- NET8 support
-
-### [2023-09-01] 0.0.8
-
-- Updated templates
-
-### [2023-08-13] 0.0.7
-
-- Updated banner plus fix weird behavior
-
-### [2023-07-23] 0.0.6
-
-- Added gnx-webapi support
-
-### [2023-07-10] 0.0.5
-
-- Fix crash in case of leading and trailing spaces
-
-### [2023-07-10] 0.0.4
-
-- Added capitalCase on the project name
-
-### [2023-06-03] 0.0.3
-
-- Updated syntax to .Net 7.0
-
-### [2023-06-02] 0.0.2
-
-- Completed list of templates
-
-### [2023-03-12] 0.0.1
-
-- First release
+View Complete [Changelogs](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md).
 
 ## License
 
 This project is licensed with the [MIT license](LICENSE).
-
-## Changelogs
-
-View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md).
 
 ## Community
 
@@ -188,8 +130,16 @@ Here are a few ways by which you can support.
 
 [![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
+## Code Contributors
+
+This project exists thanks to all the people who contribute. [Submit your PR and join the team!](CONTRIBUTING.md)
+
+[![genocs contributors](https://contrib.rocks/image?repo=Genocs/genocs-library-cli "genocs contributors")](https://github.com/genocs/genocs-library-cli/graphs/contributors)
+
 ## Financial Contributors
 
 Become a financial contributor and help me sustain the project.
 
-**Support the Project** on [Opencollective](https://opencollective.com/genocs/contribute).
+**Support the Project** on [Opencollective](https://opencollective.com/genocs)
+
+## Acknowledgements

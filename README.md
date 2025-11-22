@@ -18,7 +18,7 @@
 [license-url]: https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE
 [build-shield]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.1.2.0-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.3.0-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.CLI.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.CLI
@@ -41,7 +41,26 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
-[![logo](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-cli)
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/genocs/genocs-library-cli">
+    <img src="https://raw.githubusercontent.com/genocs/genocs-library-cli/main/assets/genocs-library-logo.png" alt=".NET Microservice Template">
+  </a>
+  <h3 align="center">.NET CLI</h3>
+  <p align="center">
+    Open Source CLI For .NET10 Microservice
+    <br />
+    <a href="https://learn.fiscanner.net"><strong>Read the Documentation »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Feature</a>
+    .
+    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Documentation</a>
+  </p>
+</p>
+
 
 # Genocs cli
 
@@ -60,7 +79,7 @@ Genocs cli can be used on .NET9 runtimes.
 
 Please check the GitHub repository getting more info.
 
-## Documentation: [Genocs Library - CLI](https://genocs-blog.netlify.app/cli/)
+## Documentation: [Genocs Library - CLI](https://learn.fiscanner.net/cli/)
 
 ---
 
@@ -95,23 +114,24 @@ dotnet pack -p:PackageVersion={semver} --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates
-dotnet run -f net9.0 --project ./src/genocs.cli.csproj genocs -i
+dotnet run -f net10.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net9.0 genocs -i
+dotnet run -f net10.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkgs genocs.cli
 ```
 
-## License
-
-This project is licensed with the [MIT license](LICENSE).
 
 ## Changelogs
 
-View Complete [Changelogs](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md).
+View Complete [Changelogs](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md).
+
+## License
+
+This project is licensed with the [MIT license](LICENSE).
 
 ## Community
 
@@ -130,7 +150,7 @@ Here are a few ways by which you can support.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
 - ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
 
-<a href="https://www.buymeacoffee.com/genocs"><img width="250" alt="black-button" src="https://user-images.githubusercontent.com/31455818/138557309-27587d91-7b82-4cab-96bb-90f4f4e600f1.png" ></a>
+[![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
 ## Code Contributors
 
@@ -142,6 +162,6 @@ This project exists thanks to all the people who contribute. [Submit your PR and
 
 Become a financial contributor and help me sustain the project.
 
-**Support the Project** on [Opencollective](https://opencollective.com/genocs/contribute).
+**Support the Project** on [Opencollective](https://opencollective.com/genocs)
 
-<a href="https://opencollective.com/genocs"><img src="https://opencollective.com/genocs/individuals.svg?width=890"></a>
+## Acknowledgements

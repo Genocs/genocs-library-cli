@@ -41,25 +41,7 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
-<!-- PROJECT LOGO -->
-<p align="center">
-  <a href="https://github.com/genocs/genocs-library-cli">
-    <img src="https://raw.githubusercontent.com/genocs/genocs-library-cli/main/assets/genocs-library-logo.png" alt=".NET Microservice Template">
-  </a>
-  <h3 align="center">.NET CLI</h3>
-  <p align="center">
-    Open Source CLI For .NET10 Microservice
-    <br />
-    <a href="https://learn.fiscanner.net"><strong>Read the Documentation »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/genocs/genocs-library-cli/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Feature</a>
-    .
-    <a href="https://github.com/genocs/genocs-library-cli/issues">Request Documentation</a>
-  </p>
-</p>
+![.NET template banner](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-logo.png ".NET template banner")
 
 
 # Genocs cli

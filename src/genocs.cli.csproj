@@ -10,7 +10,7 @@
         <Description>The CLI Tool to run Genocs templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
-        <PackageVersion>1.3.0</PackageVersion>
+        <PackageVersion>1.3.1</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <Authors>Nocco Giovanni Emanuele</Authors>
         <Copyright>Copyright (c) Genocs Services</Copyright>

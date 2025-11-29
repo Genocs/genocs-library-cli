@@ -57,7 +57,7 @@ Here where you can find the Dotnet tools official Documentation:
 
 ## Supported runtime
 
-Genocs cli can be used on .NET9 runtimes.
+Genocs cli can be used on .NET10 runtimes.
 
 Please check the GitHub repository getting more info.
 

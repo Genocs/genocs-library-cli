@@ -3,8 +3,6 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net10.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <PackageId>Genocs.CLI</PackageId>
         <RootNamespace>Genocs.CLI</RootNamespace>
         <AssemblyName>Genocs.CLI</AssemblyName>
@@ -12,7 +10,7 @@
         <Description>Genocs CLI tool for creating and using Genocs Templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
-        <PackageVersion>1.3.1</PackageVersion>
+        <PackageVersion>1.5.0</PackageVersion>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <Authors>Nocco Giovanni Emanuele</Authors>
         <Copyright>Copyright (c) 2026 Genocs Services</Copyright>

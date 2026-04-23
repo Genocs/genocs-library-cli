@@ -2,10 +2,10 @@ name: SonarQube Analysis
 
 on:
   push:
-    branches: [main_update]
+    branches: [main, develop]
     paths-ignore: ["assets/**", "containers/**", "docs/**"]
   pull_request:
-    branches: [main_update]
+    branches: [main, develop]
     paths-ignore: ["assets/**", "containers/**", "docs/**"]
   workflow_dispatch:
 

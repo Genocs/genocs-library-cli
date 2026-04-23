@@ -27,7 +27,14 @@ jobs:
         run: dotnet build -c Debug --no-restore
 
       - name: Test
-        run: dotnet test -c Debug --no-build --verbosity normal
+        run: dotnet test -c Debug --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx" --results-directory TestResults
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GenocsTestResults
+          path: TestResults/*.trx
 
       - name: Pack
         run: dotnet pack -c Debug --no-build --verbosity normal

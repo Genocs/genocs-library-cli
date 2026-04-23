@@ -3,7 +3,7 @@ name: Test Report
 on:
   workflow_run:
     workflows:
-      - Continuous Integration & Delivery
+      - Build test and pack
     types:
       - completed
 

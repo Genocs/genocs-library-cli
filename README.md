@@ -17,15 +17,21 @@ Genocs template are dotnet template that will help you to setup quickly and easi
 Here where you can find the official Documentation:
 - [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
+- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
 ## Supported runtime
 
-Genocs cli can be used on NET6 or NET7 runtimes
+Genocs cli can be used on .NET10 runtimes.
+
+Please check the GitHub repository getting more info.
+
+## Documentation: [Genocs Library - CLI](https://learn.fiscanner.net/cli/)
 
 ---
 
-Useful commands 
-``` bash
+Useful commands
+
+```bash
 # Get the list of tool
 dotnet tool list
 
@@ -42,24 +48,66 @@ dotnet tool update -g genocs.cli
 dotnet tool uninstall -g genocs.cli
 ```
 
+Useful commands to work on your own
 
-Useful commands to work on your own 
-``` bash
+```bash
 cd ./src
-# build the project 
+# build the project
 dotnet build genocs.cli.csproj
 
-# Pack the tool (to be deployed on nuget) 
-dotnet pack -p:PackageVersion=0.0.7 --output nupkgs
+# Pack the tool (to be deployed on nuget)
+dotnet pack -p:PackageVersion={semver} --output nupkgs
 dotnet pack --output nupkgs
 
 # Run the tool to install the templates
-dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i
+dotnet run -f net10.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net7.0 genocs -i
+dotnet run -f net10.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkgs genocs.cli
 ```
+
+
+## Changelogs
+
+View Complete [Changelogs](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md).
+
+## License
+
+This project is licensed with the [MIT license](LICENSE).
+
+## Community
+
+- Discord [@genocs](https://discord.com/invite/fWwArnkV)
+- Facebook Page [@genocs](https://facebook.com/Genocs)
+- Youtube Channel [@genocs](https://youtube.com/c/genocs)
+
+## Support
+
+Has this Project helped you learn something New? or Helped you at work?
+
+Here are a few ways by which you can support.
+
+- ⭐ Leave a star!
+- 🥇 Recommend this project to your colleagues.
+- 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
+- ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
+
+[![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
+
+## Code Contributors
+
+This project exists thanks to all the people who contribute. [Submit your PR and join the team!](CONTRIBUTING.md)
+
+[![genocs contributors](https://contrib.rocks/image?repo=Genocs/genocs-library-cli "genocs contributors")](https://github.com/genocs/genocs-library-cli/graphs/contributors)
+
+## Financial Contributors
+
+Become a financial contributor and help me sustain the project.
+
+**Support the Project** on [Opencollective](https://opencollective.com/genocs)
+
+## Acknowledgements

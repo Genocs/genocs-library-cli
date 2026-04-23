@@ -1,6 +1,6 @@
 ---
 description: This rule provides comprehensive best practices for developing dotnet applications, covering code organization, security, performance, testing, and common pitfalls. It aims to improve code quality, security posture, and overall efficiency when working with the .NET Core framework.
-globs: *.json,*.yml,*.cs,*.csproj,*.sln
+globs: *.json,*.yml,*.cs,*.csproj,*.slnx
 alwaysApply: false
 ---
 # .NET Core Library Best Practices and Coding Standards

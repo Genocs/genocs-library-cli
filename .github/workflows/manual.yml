@@ -32,10 +32,10 @@ jobs:
         run: echo "Hello ${{ github.event.inputs.name }}"
 
       - name: Print Run Number
-        run: echo "Hello $env:GITHUB_RUN_NUMBER"
+        run: echo "Hello $GITHUB_RUN_NUMBER"
 
       - name: Print Run ATTEMPT
-        run: echo "Hello $env:GITHUB_RUN_ATTEMPT"
+        run: echo "Hello $GITHUB_RUN_ATTEMPT"
 
       - name: Output Run ID
         run: echo ${{ github.run_id }}

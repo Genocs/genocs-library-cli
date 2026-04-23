@@ -1,6 +1,6 @@
-# This is a manually triggered nuget build and deploy
+# This is a manually triggered dockerhub build and publish
 
-name: Publish on NuGet
+name: Publish to Dockerhub
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -10,17 +10,17 @@ on:
     inputs:
       version:
         # Friendly description to be shown in the UI instead of 'name'
-        description: "Package Version"
+        description: "Image Version"
 
         # Default value if no value is explicitly provided
-        default: "1.1.0"
+        default: "8.0.0"
 
         # Input has to be provided for the workflow to run
         required: true
 
 jobs:
   build:
-    name: Update NuGet packages
+    name: Publish Docker Image
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +42,16 @@ jobs:
         run: dotnet test --no-build --verbosity normal
 
       - name: Pack
-        run: dotnet pack -c Debug -o out -p:PackageVersion=${{ github.event.inputs.version }} --no-build --verbosity normal
+        run: dotnet pack --no-build --verbosity normal
 
-      - name: Push packages to Nuget
-        run: dotnet nuget push ./out/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
+      - name: Docker Hub Log in
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push image to Dockerhub
+        run: |
+          docker build -f webapi.dockerfile -t genocs/demo-webapi:${{ github.event.inputs.version }} -t genocs/demo-webapi:latest .
+          docker push genocs/demo-webapi:${{ github.event.inputs.version }}
+          docker push genocs/demo-webapi:latest

@@ -13,9 +13,9 @@ public static class StringExtensions
         }
 
         // Split the string into words separated by a space character or period
-        string[] splitString = str.Trim().Split(' ', '.');
+        var splitString = str.Trim().Split(' ', '.');
         var sb = new StringBuilder();
-        foreach (string word in splitString)
+        foreach (var word in splitString)
         {
             // Capitalize the first letter of each word
             sb.Append(char.ToUpper(word[0]));

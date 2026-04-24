@@ -70,7 +70,7 @@ internal sealed class BlazorNewCommand : AsyncCommand<NewProjectSettings>
     protected override async Task<int> ExecuteAsync(CommandContext context, NewProjectSettings settings, CancellationToken cancellationToken)
     {
         string name = settings.ProjectName.Trim().ToCapitalCase();
-        await TemplateRunner.BootstrapBlazorAsync(name, cancellationToken).ConfigureAwait(false);
+        await TemplateRunner.BootstrapBlazorWasmAsync(name, cancellationToken).ConfigureAwait(false);
         return 0;
     }
 }

@@ -12,14 +12,20 @@ internal static class TemplateRunner
 
     internal static async Task InstallTemplatesAsync(CancellationToken cancellationToken)
     {
-        AnsiConsole.MarkupLine("[green]Installing genocs dotnet Clean Architecture template...[/]");
-        await RunDotNetAsync(["new", "install", "Genocs.CleanArchitectureTemplate::2.1.0"], cancellationToken).ConfigureAwait(false);
+        AnsiConsole.MarkupLine("[green]Installing Genocs Clean Architecture template...[/]");
+        await RunDotNetAsync(["new", "install", "Genocs.CleanArchitecture.Template"], cancellationToken).ConfigureAwait(false);
 
         AnsiConsole.WriteLine("Installing Genocs Microservice template...");
-        await RunDotNetAsync(["new", "install", "Genocs.WebApiTemplate::1.0.3"], cancellationToken).ConfigureAwait(false);
+        await RunDotNetAsync(["new", "install", "Genocs.Microservice.Template"], cancellationToken).ConfigureAwait(false);
 
-        AnsiConsole.WriteLine("Installing Genocs Blazor template...");
-        await RunDotNetAsync(["new", "install", "Genocs.MicroserviceTemplate::0.1.0"], cancellationToken).ConfigureAwait(false);
+        AnsiConsole.WriteLine("Installing Genocs Blazor WASM template...");
+        await RunDotNetAsync(["new", "install", "Genocs.BlazorWasm.Template"], cancellationToken).ConfigureAwait(false);
+
+        AnsiConsole.WriteLine("Installing Genocs Library template...");
+        await RunDotNetAsync(["new", "install", "Genocs.Library.Template"], cancellationToken).ConfigureAwait(false);
+
+        AnsiConsole.WriteLine("Installing Genocs Blazor Clean template...");
+        await RunDotNetAsync(["new", "install", "Genocs.BlazorClean.Template"], cancellationToken).ConfigureAwait(false);
 
         AnsiConsole.MarkupLine("[green]Templates installed successfully.[/]");
         AnsiConsole.MarkupLine("[green]Run [grey]dotnet new list[/] to see installed templates.[/]");
@@ -62,7 +68,7 @@ internal static class TemplateRunner
         AnsiConsole.MarkupLine("Refer to [link]https://genocs-blog.netlify.app/[/]");
     }
 
-    internal static async Task BootstrapBlazorAsync(string projectName, CancellationToken cancellationToken)
+    internal static async Task BootstrapBlazorWasmAsync(string projectName, CancellationToken cancellationToken)
     {
         ValidateProjectName(projectName);
         AnsiConsole.WriteLine($"Bootstrapping genocs Blazor WebAssembly solution at '{projectName}' ...");

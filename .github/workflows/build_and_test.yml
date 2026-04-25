@@ -2,9 +2,11 @@ name: Build test and pack
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
+    paths-ignore: ["assets/**", "docs/**", "examples/**"]
   pull_request:
-    branches: [main, develop]
+    branches: [main]
+    paths-ignore: ["assets/**", "docs/**", "examples/**"]
 
 jobs:
   build:

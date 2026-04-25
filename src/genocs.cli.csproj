@@ -43,18 +43,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="MainResource.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>MainResource.resx</DependentUpon>
-        </Compile>
+        <Compile Remove="tests/**/*.cs" />
+        <EmbeddedResource Remove="tests/**/*.resx" />
+        <None Remove="tests/**/*" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Update="MainResource.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>MainResource.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>genocs.cli.tests</_Parameter1>
+        </AssemblyAttribute>
     </ItemGroup>
 
 </Project>

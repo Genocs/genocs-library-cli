@@ -1,29 +1,23 @@
 # Genocs cli
 
 [![GitHub](https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square)](https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE)
-[![.NET build and test](https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/Genocs/genocs-library-cli/actions/workflows/build_and_test.yml)
-[![NuGet](https://img.shields.io/badge/nuget-v.0.0.7-blue)](https://www.nuget.org/packages/Genocs.CLI)
+[![.NET build and test](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml)
+[![NuGet](https://img.shields.io/nuget/v/Genocs.CLI.svg)](https://www.nuget.org/packages/Genocs.CLI)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Genocs.CLI.svg)](https://www.nuget.org/packages/Genocs.CLI)
 [![Discord](https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square)](https://discord.com/invite/fWwArnkV)
 [![Twitter](https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square)](https://twitter.com/genocs)
 
-Another key component for the Genocs ecosystem
-
 ## Introduction
 
-Genocs cli is the genocs **dotnet tool**  that allow you to use the genocs templates.
-Genocs template are dotnet template that will help you to setup quickly and easily your microservices.
+Genocs CLI is a **dotnet tool** that helps you install and use Genocs templates.
+These templates help you bootstrap microservices and other solution types quickly.
 
-Here where you can find the official Documentation:
-- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
-
+Official .NET tool documentation:
 - [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
 ## Supported runtime
 
-Genocs cli can be used on .NET10 runtimes.
-
-Please check the GitHub repository getting more info.
+Genocs CLI runs on .NET 10.
 
 ## Documentation: [Genocs Library - CLI](https://learn.fiscanner.net/cli/)
 
@@ -44,11 +38,11 @@ dotnet tool install -g genocs.cli
 # Update the tool
 dotnet tool update -g genocs.cli
 
-# Uninstall cache
+# Uninstall the tool
 dotnet tool uninstall -g genocs.cli
 ```
 
-Useful commands to work on your own
+Useful commands for local development
 
 ```bash
 cd ./src
@@ -56,18 +50,31 @@ cd ./src
 dotnet build genocs.cli.csproj
 
 # Pack the tool (to be deployed on nuget)
-dotnet pack -p:PackageVersion={semver} --output nupkgs
-dotnet pack --output nupkgs
+dotnet pack genocs.cli.csproj -p:PackageVersion={semver} --output nupkg
+dotnet pack genocs.cli.csproj --output nupkg
 
-# Run the tool to install the templates
-dotnet run -f net10.0 --project ./src/genocs.cli.csproj genocs -i
-
-# Run the tool to install the templates (some as above with cd command)
-cd ./src
-dotnet run -f net10.0 genocs -i
+# Run the tool to install templates
+dotnet run -f net10.0 --project ./src/genocs.cli.csproj -- install
 
 # Install the tool from local folder to the global cache
-dotnet tool install --global --add-source ./nupkgs genocs.cli
+dotnet tool install --global --add-source ./nupkg genocs.cli
+```
+
+Supported template commands:
+
+```bash
+genocs blazor new <ProjectName>
+genocs webapi new <ProjectName>
+genocs worker new <ProjectName>
+genocs cleanapi new <ProjectName>
+genocs angular new <ProjectName>
+genocs react new <ProjectName>
+```
+
+Run tests locally:
+
+```bash
+dotnet test genocs.cli.slnx
 ```
 
 
@@ -109,5 +116,3 @@ This project exists thanks to all the people who contribute. [Submit your PR and
 Become a financial contributor and help me sustain the project.
 
 **Support the Project** on [Opencollective](https://opencollective.com/genocs)
-
-## Acknowledgements

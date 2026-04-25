@@ -1,4 +1,4 @@
-name: CodeQL analysis
+name: CodeQL Analysis
 
 on:
   push:
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   analyze:
-    name: Analyze code with CodeQL
+    name: Analyze Code with CodeQL
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,7 +26,7 @@ jobs:
       security-events: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v6
         with:
           lfs: true

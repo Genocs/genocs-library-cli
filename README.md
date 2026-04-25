@@ -1,4 +1,6 @@
-# Genocs cli
+# Genocs CLI
+
+![Genocs Library Banner](assets/genocs-library-banner_v2.png)
 
 [![GitHub](https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square)](https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE)
 [![.NET build and test](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml)
@@ -7,27 +9,32 @@
 [![Discord](https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square)](https://discord.com/invite/fWwArnkV)
 [![Twitter](https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square)](https://twitter.com/genocs)
 
+<p align="center">
+  <img src="assets/genocs-library-logo.png" alt="Genocs Library Logo" width="160" />
+</p>
+
 ## Introduction
 
 Genocs CLI is a **dotnet tool** that helps you install and use Genocs templates.
 These templates help you bootstrap microservices and other solution types quickly.
 
-Official .NET tool documentation:
-- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
-
 ## Supported runtime
 
 Genocs CLI runs on .NET 10.
 
-## Documentation: [Genocs Library - CLI](https://learn.fiscanner.net/cli/)
+## Documentation
+
+- [Genocs CLI docs](https://learn.fiscanner.net/cli/)
+- [Microsoft - .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
+- [Changelog](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md)
 
 ---
 
 Useful commands
 
 ```bash
-# Get the list of tool
-dotnet tool list
+# List installed tools
+dotnet tool list -g
 
 # Get the list of templates
 dotnet new list
@@ -60,9 +67,13 @@ dotnet run -f net10.0 --project ./src/genocs.cli.csproj -- install
 dotnet tool install --global --add-source ./nupkg genocs.cli
 ```
 
-Supported template commands:
+CLI commands:
 
 ```bash
+genocs version
+genocs install
+# aliases: genocs i | genocs update | genocs u
+
 genocs blazor new <ProjectName>
 genocs webapi new <ProjectName>
 genocs worker new <ProjectName>
@@ -76,12 +87,6 @@ Run tests locally:
 ```bash
 dotnet test genocs.cli.slnx
 ```
-
-
-## Changelogs
-
-View Complete [Changelogs](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md).
-
 ## License
 
 This project is licensed with the [MIT license](LICENSE).

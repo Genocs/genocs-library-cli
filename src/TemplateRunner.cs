@@ -8,7 +8,7 @@ internal static class TemplateRunner
 {
     // Allows letters, digits, underscores, hyphens, and dots; must start with a letter or underscore.
     private static readonly Regex ValidProjectNameRegex =
-        new(@"^[a-zA-Z_][a-zA-Z0-9_\-\.]*$", RegexOptions.Compiled);
+        new(@"^[a-zA-Z_][a-zA-Z0-9_\-\.]*$", RegexOptions.Compiled, TimeSpan.FromMilliseconds(500));
 
     internal static async Task InstallTemplatesAsync(CancellationToken cancellationToken)
     {

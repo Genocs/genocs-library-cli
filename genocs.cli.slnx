@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/tests/">
+    <Project Path="src/tests/genocs.cli.tests/genocs.cli.tests.csproj" />
+  </Folder>
   <Folder Name="/_Solution Items/">
     <File Path="Directory.Build.props" />
     <File Path="Directory.Build.targets" />

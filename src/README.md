@@ -1,36 +1,57 @@
-# Genocs Library Cli
+# Genocs CLI
 
-The genocs cli to use for Genocs Templates
+![Genocs Library Banner](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-banner_v2.png)
 
-## Description
+Genocs CLI is the official .NET tool to install Genocs templates and bootstrap projects from the command line.
 
-TBW
+## Supported runtime
 
+Genocs CLI runs on .NET 10.
 
-## Support
+## Install
 
-Please check the GitHub repository getting more info.
+```bash
+dotnet tool install -g genocs.cli
+```
 
+## Basic usage
 
-## Release notes
+```bash
+# Install or update Genocs templates
+genocs install
+# aliases: genocs i | genocs update | genocs u
 
-### [2023-08-13] 0.0.7
-- Updated banner plus fix weird behavior
+# Show tool version
+genocs version
 
-### [2023-07-23] 0.0.6
-- Added gnx-webapi support
+# Create new projects
+genocs blazor new <ProjectName>
+genocs webapi new <ProjectName>
+genocs worker new <ProjectName>
+genocs cleanapi new <ProjectName>
+genocs angular new <ProjectName>
+genocs react new <ProjectName>
+```
 
-### [2023-07-10] 0.0.5
-- Fix crash in case of leading and trailing spaces
+## Useful dotnet commands
 
-### [2023-07-10] 0.0.4
-- Added capitalCase on the project name
+```bash
+# List installed tools
+dotnet tool list -g
 
-### [2023-06-03] 0.0.3
-- Updated syntax to .Net 7.0
+# Update the tool
+dotnet tool update -g genocs.cli
 
-### [2023-06-02] 0.0.2
-- Completed list of templates
+# Uninstall the tool
+dotnet tool uninstall -g genocs.cli
+```
 
-### [2023-03-12] 0.0.1
-- First release
+## Documentation
+
+- [Genocs CLI docs](https://learn.fiscanner.net/cli/)
+- [Microsoft - .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
+- [Changelog](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md)
+
+## License
+
+Licensed under the [MIT license](https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE).

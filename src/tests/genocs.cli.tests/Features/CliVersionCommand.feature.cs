@@ -17,21 +17,21 @@ namespace genocs.cli.tests.Features
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "3.0.0.0")]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class CLIVersionCommandFeature : object, global::Xunit.IClassFixture<CLIVersionCommandFeature.FixtureData>, global::Xunit.IAsyncLifetime
+    public partial class CLIVersionCommandFeature : object, Xunit.IClassFixture<CLIVersionCommandFeature.FixtureData>, Xunit.IAsyncLifetime
     {
         
         private global::Reqnroll.ITestRunner testRunner;
+        
+        private Xunit.ITestOutputHelper _testOutputHelper;
         
         private static string[] featureTags = ((string[])(null));
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features", "CLI Version Command", "  Validate the real application can run and return version information.", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
-        private global::Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
-        
 #line 1 "CliVersionCommand.feature"
 #line hidden
         
-        public CLIVersionCommandFeature(CLIVersionCommandFeature.FixtureData fixtureData, global::Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CLIVersionCommandFeature(CLIVersionCommandFeature.FixtureData fixtureData, Xunit.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
         }
@@ -90,7 +90,7 @@ namespace genocs.cli.tests.Features
         public void ScenarioInitialize(global::Reqnroll.ScenarioInfo scenarioInfo, global::Reqnroll.RuleInfo ruleInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo, ruleInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<global::Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.ITestOutputHelper>(_testOutputHelper);
         }
         
         public async global::System.Threading.Tasks.Task ScenarioStartAsync()
@@ -108,7 +108,7 @@ namespace genocs.cli.tests.Features
             return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/CliVersionCommand.feature.ndjson", 3);
         }
         
-        async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.InitializeAsync()
+        async System.Threading.Tasks.ValueTask Xunit.IAsyncLifetime.InitializeAsync()
         {
             try
             {
@@ -118,7 +118,7 @@ namespace genocs.cli.tests.Features
             {
                 try
                 {
-                    ((global::Xunit.IAsyncLifetime)(this)).DisposeAsync();
+                    ((Xunit.IAsyncLifetime)(this)).DisposeAsync();
                 }
                 catch (System.Exception e2)
                 {
@@ -128,12 +128,12 @@ namespace genocs.cli.tests.Features
             }
         }
         
-        async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.DisposeAsync()
+        async System.Threading.Tasks.ValueTask System.IAsyncDisposable.DisposeAsync()
         {
             await this.TestTearDownAsync();
         }
         
-        [global::Xunit.SkippableFactAttribute(DisplayName="Run version command")]
+        [global::Xunit.FactAttribute(DisplayName="Run version command")]
         [global::Xunit.TraitAttribute("FeatureTitle", "CLI Version Command")]
         [global::Xunit.TraitAttribute("Description", "Run version command")]
         public async global::System.Threading.Tasks.Task RunVersionCommand()
@@ -172,15 +172,15 @@ namespace genocs.cli.tests.Features
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "3.0.0.0")]
         [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        public class FixtureData : object, global::Xunit.IAsyncLifetime
+        public class FixtureData : object, Xunit.IAsyncLifetime
         {
             
-            async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.InitializeAsync()
+            async System.Threading.Tasks.ValueTask Xunit.IAsyncLifetime.InitializeAsync()
             {
                 await CLIVersionCommandFeature.FeatureSetupAsync();
             }
             
-            async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.DisposeAsync()
+            async System.Threading.Tasks.ValueTask System.IAsyncDisposable.DisposeAsync()
             {
                 await CLIVersionCommandFeature.FeatureTearDownAsync();
             }

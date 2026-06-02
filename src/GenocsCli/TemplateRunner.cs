@@ -54,7 +54,7 @@ internal static class TemplateRunner
     {
         ValidateProjectName(projectName);
         AnsiConsole.WriteLine($"Bootstrapping genocs Clean Architecture project at '{projectName}' ...");
-        await RunDotNetAsync(["new", "cleanarchitecture", "-n", projectName, "-o", projectName, "-v=q"], cancellationToken).ConfigureAwait(false);
+        await RunDotNetAsync(["new", "gnx-cleanarchitecture", "-n", projectName, "-o", projectName, "-v=q"], cancellationToken).ConfigureAwait(false);
         AnsiConsole.MarkupLine($"[green]Genocs Clean Architecture solution '{Markup.Escape(projectName)}' successfully created.[/]");
         AnsiConsole.MarkupLine("Refer to [link]https://genocs-blog.netlify.app/[/]");
     }
@@ -99,7 +99,7 @@ internal static class TemplateRunner
             UseShellExecute = false,
         };
 
-        foreach (var arg in arguments)
+        foreach (string arg in arguments)
         {
             psi.ArgumentList.Add(arg);
         }

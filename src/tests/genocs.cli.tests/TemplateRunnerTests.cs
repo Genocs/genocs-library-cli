@@ -1,4 +1,5 @@
 using Genocs.CLI;
+using Xunit;
 
 namespace genocs.cli.tests;
 

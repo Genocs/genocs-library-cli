@@ -14,7 +14,7 @@ public sealed class CliVersionCommandSteps
     [Given("the genocs CLI project is available")]
     public void GivenTheGenocsCliProjectIsAvailable()
     {
-        string projectPath = Path.Combine(ResolveRepositoryRoot(), "src", "genocs.cli.csproj");
+        string projectPath = Path.Combine(ResolveRepositoryRoot(), "src", "GenocsCli", "genocs.cli.csproj");
         Assert.True(File.Exists(projectPath), $"CLI project was not found at '{projectPath}'.");
     }
 
@@ -33,7 +33,7 @@ public sealed class CliVersionCommandSteps
 
         psi.ArgumentList.Add("run");
         psi.ArgumentList.Add("--project");
-        psi.ArgumentList.Add("src/genocs.cli.csproj");
+        psi.ArgumentList.Add("src/GenocsCli/genocs.cli.csproj");
         psi.ArgumentList.Add("--");
         psi.ArgumentList.Add("version");
 

@@ -10,7 +10,7 @@ repository:
   description: A library to build .NET microservice-based applications using best practices and patterns.
 
   # A URL with more information about the repository
-  # homepage: set this only after confirming the intended repository homepage
+  homepage: https://learn.fiscanner.net
 
   # A comma-separated list of topics to set on the repository
   topics: automation,docker,dotnet,testing
@@ -175,7 +175,7 @@ branches:
         # Required. Require branches to be up to date before merging.
         strict: true
         # Required. The list of status checks to require in order to merge into this branch
-        contexts: ["Build test and pack", "Analyze code with CodeQL (csharp)", "test-report"]
+        contexts: ["Build Test and Pack", "CodeQL Analysis", "Build Test Report"]
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
       enforce_admins: false
       # Prevent merge commits from being pushed to matching branches
@@ -207,7 +207,7 @@ branches:
         # Required. Require branches to be up to date before merging.
         strict: true
         # Required. The list of status checks to require in order to merge into this branch
-        contexts: ["Build test and pack", "Analyze code with CodeQL (csharp)", "test-report"]
+        contexts: ["Build Test and Pack", "CodeQL Analysis", "Build Test Report"]
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
       enforce_admins: false
       # Prevent merge commits from being pushed to matching branches

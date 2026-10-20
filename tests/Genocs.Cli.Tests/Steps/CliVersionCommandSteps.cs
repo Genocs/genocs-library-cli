@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Reqnroll;
 using Xunit;
 
-namespace genocs.cli.tests.Steps;
+namespace Genocs.Cli.Tests.Steps;
 
 [Binding]
 public sealed class CliVersionCommandSteps
@@ -14,7 +14,7 @@ public sealed class CliVersionCommandSteps
     [Given("the genocs CLI project is available")]
     public void GivenTheGenocsCliProjectIsAvailable()
     {
-        string projectPath = Path.Combine(ResolveRepositoryRoot(), "src", "GenocsCli", "genocs.cli.csproj");
+        string projectPath = Path.Combine(ResolveRepositoryRoot(), "src", "Genocs.Cli", "Genocs.Cli.csproj");
         Assert.True(File.Exists(projectPath), $"CLI project was not found at '{projectPath}'.");
     }
 
@@ -33,7 +33,7 @@ public sealed class CliVersionCommandSteps
 
         psi.ArgumentList.Add("run");
         psi.ArgumentList.Add("--project");
-        psi.ArgumentList.Add("src/GenocsCli/genocs.cli.csproj");
+        psi.ArgumentList.Add("src/Genocs.Cli/Genocs.Cli.csproj");
         psi.ArgumentList.Add("--");
         psi.ArgumentList.Add("version");
 
@@ -68,7 +68,7 @@ public sealed class CliVersionCommandSteps
 
         while (!string.IsNullOrEmpty(current))
         {
-            if (File.Exists(Path.Combine(current, "genocs.cli.slnx")))
+            if (File.Exists(Path.Combine(current, "src", "Genocs.Cli", "Genocs.Cli.csproj")))
             {
                 return current;
             }

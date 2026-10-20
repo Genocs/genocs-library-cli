@@ -1,6 +1,6 @@
 ﻿using Spectre.Console.Cli;
 
-namespace Genocs.CLI;
+namespace Genocs.Cli;
 
 internal static class Program
 {
@@ -21,37 +21,37 @@ internal static class Program
 
             config.AddBranch("angular", branch =>
             {
-                branch.SetDescription("Angular template commands.");
+                branch.SetDescription("Scaffold an Angular application.");
                 branch.AddCommand<AngularNewCommand>("new").WithAlias("n");
             });
 
             config.AddBranch("react", branch =>
             {
-                branch.SetDescription("React template commands.");
+                branch.SetDescription("Scaffold a React application.");
                 branch.AddCommand<ReactNewCommand>("new").WithAlias("n");
             });
 
             config.AddBranch("blazor", branch =>
             {
-                branch.SetDescription("Blazor WebAssembly template commands.");
+                branch.SetDescription("Scaffold a Blazor WebAssembly application.");
                 branch.AddCommand<BlazorNewCommand>("new").WithAlias("n");
             });
 
             config.AddBranch("worker", branch =>
             {
-                branch.SetDescription("Worker template commands.");
+                branch.SetDescription("Scaffold a worker application.");
                 branch.AddCommand<WorkerNewCommand>("new").WithAlias("n");
             });
 
             config.AddBranch("webapi", branch =>
             {
-                branch.SetDescription("Web API microservice template commands.");
+                branch.SetDescription("Scaffold a Web API microservice.");
                 branch.AddCommand<WebApiNewCommand>("new").WithAlias("n");
             });
 
             config.AddBranch("cleanapi", branch =>
             {
-                branch.SetDescription("Clean Architecture template commands.");
+                branch.SetDescription("Scaffold a Clean Architecture solution.");
                 branch.AddCommand<CleanApiNewCommand>("new").WithAlias("n");
             });
         });

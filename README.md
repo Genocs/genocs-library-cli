@@ -24,7 +24,7 @@ Genocs CLI runs on .NET 10.
 
 ## Documentation
 
-- [Genocs CLI docs](https://learn.fiscanner.net/cli/)
+- [Genocs CLI docs](https://genocs-blog.netlify.app/cli/)
 - [Microsoft - .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 - [Changelog](https://github.com/genocs/genocs-library-cli/blob/main/CHANGELOG.md)
 
@@ -54,14 +54,14 @@ Useful commands for local development
 ```bash
 cd ./src
 # build the project
-dotnet build genocs.cli.csproj
+dotnet build Genocs.Cli.csproj
 
 # Pack the tool (to be deployed on nuget)
-dotnet pack genocs.cli.csproj -p:PackageVersion={semver} --output nupkg
-dotnet pack genocs.cli.csproj --output nupkg
+dotnet pack Genocs.Cli.csproj -p:PackageVersion={semver} --output nupkg
+dotnet pack Genocs.Cli.csproj --output nupkg
 
 # Run the tool to install templates
-dotnet run -f net10.0 --project ./src/genocs.cli.csproj -- install
+dotnet run -f net10.0 --project ./src/Genocs.Cli.csproj -- install
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkg genocs.cli

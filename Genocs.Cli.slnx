@@ -1,9 +1,9 @@
 <Solution>
-  <Folder Name="/src/GenocsCli/">
-    <Project Path="src/GenocsCli/genocs.cli.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/Genocs.Cli/Genocs.Cli.csproj" />
   </Folder>
-  <Folder Name="/src/tests/">
-    <Project Path="src/tests/genocs.cli.tests/genocs.cli.tests.csproj" />
+  <Folder Name="/tests/">
+    <Project Path="tests/Genocs.Cli.Tests/Genocs.Cli.Tests.csproj" />
   </Folder>
   <Folder Name="/_Solution Items/">
     <File Path="Directory.Build.props" />

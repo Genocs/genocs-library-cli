@@ -1,6 +1,6 @@
 using Spectre.Console;
 
-namespace Genocs.CLI;
+namespace Genocs.Cli;
 
 internal static class CliPresentation
 {

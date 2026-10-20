@@ -30,7 +30,10 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
+          dotnet-version: |
+            8.0.x
+            9.0.x
+            10.0.x
 
       - name: Cache SonarQube Packages
         uses: actions/cache@v5
@@ -54,7 +57,7 @@ jobs:
           dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
 
       - name: Restore Dependencies
-        run: dotnet restore genocs.cli.slnx
+        run: dotnet restore Genocs.Cli.slnx
 
       - name: Begin SonarQube Analysis
         env:
@@ -68,24 +71,24 @@ jobs:
             /o:"${{ env.SONAR_ORGANIZATION }}" \
             /d:sonar.token="${{ env.SONAR_TOKEN }}" \
             /d:sonar.host.url="${{ env.SONAR_HOST_URL }}" \
-            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
+            /d:sonar.cs.cobertura.reportsPaths="**/coverage.cobertura.xml" \
             /d:sonar.cs.vstest.reportsPaths="**/*.trx" \
             /d:sonar.exclusions="**/bin/**,**/obj/**,**/Migrations/**,**/*.css,**/*.js" \
             /d:sonar.coverage.exclusions="**Tests*.cs,**/Program.cs,**/Startup.cs"
 
       - name: Build Solution
-        run: dotnet build genocs.cli.slnx --configuration Release --no-restore
+        run: dotnet build Genocs.Cli.slnx --configuration Release --no-restore
 
       - name: Run Tests with Coverage
         run: |
-          dotnet test genocs.cli.slnx \
+          dotnet test Genocs.Cli.slnx \
             --configuration Release \
             --no-build \
             --verbosity normal \
-            --collect:"XPlat Code Coverage" \
-            --results-directory ./coverage \
-            --logger "trx" \
-            -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+            --report-trx \
+            --coverage \
+            --coverage-output-format cobertura \
+            --results-directory ./coverage
 
       - name: End SonarQube Analysis
         env:

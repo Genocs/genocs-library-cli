@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace Genocs.CLI;
+namespace Genocs.Cli;
 
 internal static class ToolVersion
 {

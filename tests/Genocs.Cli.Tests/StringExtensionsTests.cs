@@ -1,7 +1,6 @@
-using Genocs.CLI;
 using Xunit;
 
-namespace genocs.cli.tests;
+namespace Genocs.Cli.Tests;
 
 public sealed class StringExtensionsTests
 {

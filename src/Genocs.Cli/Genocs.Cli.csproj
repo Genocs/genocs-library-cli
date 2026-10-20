@@ -3,10 +3,10 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net10.0</TargetFramework>
-        <PackageId>Genocs.CLI</PackageId>
-        <RootNamespace>Genocs.CLI</RootNamespace>
-        <AssemblyName>Genocs.CLI</AssemblyName>
-        <Title>Genocs CLI Tool.</Title>
+        <PackageId>Genocs.Cli</PackageId>
+        <RootNamespace>Genocs.Cli</RootNamespace>
+        <AssemblyName>Genocs.Cli</AssemblyName>
+        <Title>Genocs CLI</Title>
         <Description>Genocs CLI tool for creating and using Genocs Templates.</Description>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>genocs</ToolCommandName>
@@ -24,12 +24,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Spectre.Console.Cli" Version="0.55.0" />
+        <PackageReference Include="Spectre.Console.Cli" Version="0.57.2" />
     </ItemGroup>
 
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
-            <_Parameter1>genocs.cli.tests</_Parameter1>
+            <_Parameter1>Genocs.Cli.Tests</_Parameter1>
         </AssemblyAttribute>
     </ItemGroup>
 

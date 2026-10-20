@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Genocs.CLI;
+namespace Genocs.Cli;
 
 public static class StringExtensions
 {

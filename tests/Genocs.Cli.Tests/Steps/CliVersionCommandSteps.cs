@@ -68,7 +68,7 @@ public sealed class CliVersionCommandSteps
 
         while (!string.IsNullOrEmpty(current))
         {
-            if (File.Exists(Path.Combine(current, "Genocs.Cli.slnx")))
+            if (File.Exists(Path.Combine(current, "src", "Genocs.Cli", "Genocs.Cli.csproj")))
             {
                 return current;
             }

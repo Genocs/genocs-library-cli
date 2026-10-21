@@ -1,7 +1,4 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/Genocs.Cli/Genocs.Cli.csproj" />
-  </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Genocs.Cli.Tests/Genocs.Cli.Tests.csproj" />
   </Folder>
@@ -13,4 +10,5 @@
     <File Path="README.md" />
     <File Path="stylecop.json" />
   </Folder>
+  <Project Path="src/Genocs.Cli/Genocs.Cli.csproj" />
 </Solution>

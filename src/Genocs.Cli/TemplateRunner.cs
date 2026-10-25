@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using Spectre.Console;
 
@@ -95,7 +96,7 @@ internal static class TemplateRunner
     {
         var psi = new ProcessStartInfo
         {
-            FileName = "dotnet",
+            FileName = ResolveDotNetPath(),
             UseShellExecute = false,
         };
 
@@ -124,5 +125,40 @@ internal static class TemplateRunner
         {
             throw new InvalidOperationException($"dotnet exited with code {proc.ExitCode}.");
         }
+    }
+
+    private static string ResolveDotNetPath()
+    {
+        string exeName = OperatingSystem.IsWindows() ? "dotnet.exe" : "dotnet";
+
+        // 1. Same installation as the runtime currently executing this CLI
+        string? runtimeDir = RuntimeEnvironment.GetRuntimeDirectory()
+            .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+
+        // .../dotnet/shared/Microsoft.NETCore.App/<version> -> .../dotnet
+        string? root = Directory.GetParent(runtimeDir)?.Parent?.Parent?.FullName;
+        if (root is not null)
+        {
+            string? candidate = Path.Combine(root, exeName);
+            if (File.Exists(candidate)) return candidate;
+        }
+
+        // 2. DOTNET_ROOT, if the user or installer defined it
+        string? dotnetRoot = Environment.GetEnvironmentVariable("DOTNET_ROOT");
+        if (!string.IsNullOrWhiteSpace(dotnetRoot))
+        {
+            string? candidate = Path.Combine(dotnetRoot, exeName);
+            if (File.Exists(candidate)) return candidate;
+        }
+
+        // 3. Well-known default install location
+        string? defaultRoot = OperatingSystem.IsWindows()
+            ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "dotnet")
+            : OperatingSystem.IsMacOS() ? "/usr/local/share/dotnet" : "/usr/share/dotnet";
+
+        string? fallback = Path.Combine(defaultRoot, exeName);
+        if (File.Exists(fallback)) return fallback;
+
+        throw new FileNotFoundException("Unable to locate the dotnet executable.", fallback);
     }
 }

@@ -3,6 +3,7 @@ description: This rule provides comprehensive best practices for developing dotn
 globs: *.json,*.yml,*.cs,*.csproj,*.slnx
 alwaysApply: false
 ---
+
 # .NET Core Library Best Practices and Coding Standards
 
 This document outlines the recommended best practices for developing applications and infrastructure using Microsoft .NET Core, Azure DevOps and Azure services. It covers various aspects including solution setup, code organization, security, and tooling to ensure robust, scalable, and secure solutions.
@@ -32,16 +33,20 @@ root-project/
 │   └── rules/
 ├── .git/
 ├── .github/
-│   ├── chatmode
+│   ├── workflows
+|   │   └── build-and-test.yml
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
 │   ├── instructions
 │   └── workflows/
+├── docs/
 ├── scripts/
 ├── src/
+├── tests/
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
 ├── CHANGELOG.md
-├── CODE_OF_CONDUCT.md
 ├── Directory.Build.props
 ├── Directory.Build.targets
 ├── dotnet.ruleset

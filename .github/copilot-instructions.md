@@ -12,12 +12,5 @@ applyTo: '**'
 ## 2. Tech Stack & Architecture
 ### Backend (C# .NET)
 - **DI Container:** Microsoft.Extensions.DependencyInjection.
-- **Data Access:** 
-  - **MongoDB Connectors:** Specifically for MongoDB interactions.
-  - **Repository Pattern:** Implemented for data access abstraction.
 - **Validation:** FluentValidation.
 - **Testing:** xUnit, Reqnroll.
-
-### Infrastructure
-- **DB:** MongoDB or SQL Server (depending on the use case).
-- **Caching:** Redis.

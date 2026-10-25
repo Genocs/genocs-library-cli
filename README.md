@@ -85,7 +85,7 @@ genocs react new <ProjectName>
 Run tests locally:
 
 ```bash
-dotnet test cli.slnx
+dotnet test genocs.cli.slnx
 ```
 ## License
 

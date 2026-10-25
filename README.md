@@ -54,14 +54,17 @@ Useful commands for local development
 ```bash
 cd ./src
 # build the project
-dotnet build Genocs.Cli.csproj
+dotnet build
+
+# run the tests
+dotnet test
 
 # Pack the tool (to be deployed on nuget)
-dotnet pack Genocs.Cli.csproj -p:PackageVersion={semver} --output nupkg
-dotnet pack Genocs.Cli.csproj --output nupkg
+dotnet pack -p:PackageVersion=1.5.4 --output nupkg
+dotnet pack --output nupkg
 
 # Run the tool to install templates
-dotnet run -f net10.0 --project ./src/Genocs.Cli.csproj -- install
+dotnet run -f net10.0 --project ./src/Genocs.Cli/Genocs.Cli.csproj -- install
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./nupkg genocs.cli
@@ -82,11 +85,6 @@ genocs angular new <ProjectName>
 genocs react new <ProjectName>
 ```
 
-Run tests locally:
-
-```bash
-dotnet test genocs.cli.slnx
-```
 ## License
 
 This project is licensed with the [MIT license](LICENSE).

@@ -1,6 +1,11 @@
-# Genocs CLI
+﻿# Genocs CLI
 
 ![Genocs Library Banner](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/genocs-library-banner_v2.png)
+
+[![License](https://img.shields.io/github/license/Genocs/genocs-library-cli?color=2da44e&style=flat-square)](https://github.com/Genocs/genocs-library-cli/blob/main/LICENSE)
+[![Build](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Genocs/genocs-library-cli/actions/workflows/build-and-test.yml)
+[![NuGet](https://img.shields.io/nuget/v/Genocs.CLI.svg)](https://www.nuget.org/packages/Genocs.CLI)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Genocs.CLI.svg)](https://www.nuget.org/packages/Genocs.CLI)
 
 Genocs CLI is the official .NET tool to install Genocs templates and bootstrap projects from the command line.
 
@@ -51,6 +56,12 @@ dotnet tool uninstall -g genocs.cli
 - [Genocs CLI docs](https://learn.fiscanner.net/cli/)
 - [Microsoft - .NET tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 - [Changelog](https://github.com/Genocs/genocs-library-cli/blob/main/CHANGELOG.md)
+
+## Community
+
+- Discord [@genocs](https://discord.com/invite/fWwArnkV)
+- Facebook Page [@genocs](https://facebook.com/Genocs)
+- Youtube Channel [@genocs](https://youtube.com/c/genocs)
 
 ## License
 

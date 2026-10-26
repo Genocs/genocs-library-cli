@@ -10,13 +10,13 @@
 [![Twitter](https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square)](https://twitter.com/genocs)
 
 <p align="center">
-  <img src="assets/genocs-library-logo.png" alt="Genocs Library Logo" width="160" />
+  <img src="assets/genocs-library-logo.png" alt="Genocs Library Logo" width="800" />
 </p>
 
 ## Introduction
 
-Genocs CLI is a **dotnet tool** that helps you install and use Genocs templates.
-These templates help you bootstrap microservices and other solution types quickly.
+Genocs CLI is a **.NET tool** for installing and using Genocs templates.
+Use these templates to quickly bootstrap microservices and other types of solutions.
 
 ## Supported runtime
 
@@ -30,16 +30,16 @@ Genocs CLI runs on .NET 10.
 
 ---
 
-Useful commands
+## Common commands
 
 ```bash
 # List installed tools
 dotnet tool list -g
 
-# Get the list of templates
+# List available templates
 dotnet new list
 
-# Install from nuget
+# Install from NuGet
 dotnet tool install -g genocs.cli
 
 # Update the tool
@@ -49,33 +49,32 @@ dotnet tool update -g genocs.cli
 dotnet tool uninstall -g genocs.cli
 ```
 
-Useful commands for local development
+## Local development
 
 ```bash
-cd ./src
-# build the project
+# Build the project
 dotnet build
 
-# run the tests
+# Run the tests
 dotnet test
 
-# Pack the tool (to be deployed on nuget)
+# Pack the tool for NuGet
 dotnet pack -p:PackageVersion=1.5.4 --output nupkg
 dotnet pack --output nupkg
 
 # Run the tool to install templates
 dotnet run -f net10.0 --project ./src/Genocs.Cli/Genocs.Cli.csproj -- install
 
-# Install the tool from local folder to the global cache
+# Install the tool from the local folder to the global cache
 dotnet tool install --global --add-source ./nupkg genocs.cli
 ```
 
-CLI commands:
+## CLI commands
 
 ```bash
 genocs version
 genocs install
-# aliases: genocs i | genocs update | genocs u
+# Install/update commands: genocs install (genocs i) and genocs update (genocs u)
 
 genocs blazor new <ProjectName>
 genocs webapi new <ProjectName>
@@ -85,37 +84,27 @@ genocs angular new <ProjectName>
 genocs react new <ProjectName>
 ```
 
-## License
-
-This project is licensed with the [MIT license](LICENSE).
-
 ## Community
 
 - Discord [@genocs](https://discord.com/invite/fWwArnkV)
 - Facebook Page [@genocs](https://facebook.com/Genocs)
-- Youtube Channel [@genocs](https://youtube.com/c/genocs)
+- YouTube channel [@genocs](https://youtube.com/c/genocs)
 
 ## Support
 
-Has this Project helped you learn something New? or Helped you at work?
+Has this project helped you learn something new or helped you at work?
 
-Here are a few ways by which you can support.
+Here are a few ways you can support the project:
 
 - ⭐ Leave a star!
 - 🥇 Recommend this project to your colleagues.
-- 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
+- 🦸 Consider endorsing me on LinkedIn for ASP.NET Core: [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/)
 - ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
 
 [![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-cli/main/assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
-## Code Contributors
+## Financial contributors
 
-This project exists thanks to all the people who contribute. [Submit your PR and join the team!](CONTRIBUTING.md)
+Become a financial contributor to help sustain the project.
 
-[![genocs contributors](https://contrib.rocks/image?repo=Genocs/genocs-library-cli "genocs contributors")](https://github.com/genocs/genocs-library-cli/graphs/contributors)
-
-## Financial Contributors
-
-Become a financial contributor and help me sustain the project.
-
-**Support the Project** on [Opencollective](https://opencollective.com/genocs)
+**Support the project** on [Open Collective](https://opencollective.com/genocs)
